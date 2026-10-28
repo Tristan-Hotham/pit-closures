@@ -486,6 +486,6 @@ document.getElementById("bigtab").innerHTML = `<thead><tr><th>Town</th><th class
 document.getElementById("sicktab").innerHTML = `<thead><tr><th>Town</th><th class="num">2021</th><th class="num">Long-term sick</th><th class="num">Last pit</th><th class="wide">Pits within reach (closed)</th></tr></thead><tbody>` +
   R.top_sick.slice(0, 10).map(r => `<tr><td><span class="dot" style="background:var(--hot)"></span>${esc(r.name)}<small>${esc(r.region)}</small></td><td class="num">${fmt(r.pop)}</td><td class="num">${pc(r.sick)}</td><td class="num">${r.last}</td><td class="wide">${esc(r.pits)}</td></tr>`).join("") + "</tbody>";
 </script>
-<script src="https://tristan-hotham.github.io/assets/site-nav.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
