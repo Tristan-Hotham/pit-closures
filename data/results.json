@@ -1,0 +1,2976 @@
+{
+ "pits": {
+  "n": 196,
+  "by_country": {
+   "England": 151,
+   "Wales": 35,
+   "Scotland": 10
+  },
+  "by_area": {
+   "Yorkshire": 62,
+   "Nottinghamshire": 26,
+   "Glamorgan": 20,
+   "Durham": 12,
+   "Leicestershire": 11,
+   "Derbyshire": 10,
+   "Staffordshire": 10,
+   "Monmouthshire": 10,
+   "Lancashire": 8,
+   "Northumberland": 6,
+   "Fife": 4,
+   "Kent": 3,
+   "Carmarthenshire": 3,
+   "Warwickshire": 2,
+   "Ayrshire": 2,
+   "Midlothian": 2,
+   "Flintshire": 2,
+   "Cumberland": 1,
+   "Stirlingshire": 1,
+   "West Lothian": 1
+  },
+  "by_year": {
+   "1984": 7,
+   "1985": 32,
+   "1986": 25,
+   "1987": 11,
+   "1988": 11,
+   "1989": 22,
+   "1990": 6,
+   "1991": 17,
+   "1992": 12,
+   "1993": 14,
+   "1994": 10,
+   "1995": 1,
+   "1996": 4,
+   "1997": 3,
+   "1998": 2,
+   "1999": 1,
+   "2000": 1,
+   "2002": 2,
+   "2003": 1,
+   "2004": 4,
+   "2005": 1,
+   "2006": 1,
+   "2007": 1,
+   "2008": 1,
+   "2010": 1,
+   "2013": 2,
+   "2015": 3
+  },
+  "peak_year": 1985,
+  "peak_n": 32,
+  "n_1984_87": 75,
+  "n_1988_94": 92,
+  "n_1995_2015": 29,
+  "n_by_1994": 167,
+  "n_1992_94": 36,
+  "n_1985_86": 57,
+  "n_pre_strike": 4,
+  "n_2000s": 18,
+  "share_by_1994": 0.8520408163265306,
+  "share_by_1987": 0.3826530612244898,
+  "placing": {
+   "village": 95,
+   "wikidata": 64,
+   "osm_colliery": 37
+  },
+  "year_source": {
+   "NMRS": 116,
+   "Wikipedia (Yorkshire list)": 58,
+   "Wikipedia (Derbyshire or UK list)": 21,
+   "Wikipedia (UK list)": 1
+  },
+  "year_agreement": {
+   "exact": 62,
+   "more": 8,
+   "1yr": 7
+  },
+  "n_york_wiki": 58,
+  "n_nmrs_rows": 193,
+  "n_year_checked": 77,
+  "share_year_exact": 0.8051948051948052,
+  "share_year_within1": 0.8961038961038961,
+  "last": [
+   {
+    "name": "Hatfield",
+    "village": "Stainforth",
+    "area": "Yorkshire",
+    "year": 2015
+   },
+   {
+    "name": "Kellingley",
+    "village": "Knottingley",
+    "area": "Yorkshire",
+    "year": 2015
+   },
+   {
+    "name": "Thoresby",
+    "village": "Edwinstowe",
+    "area": "Nottinghamshire",
+    "year": 2015
+   },
+   {
+    "name": "Daw Mill",
+    "village": "New Arley",
+    "area": "Staffordshire",
+    "year": 2013
+   },
+   {
+    "name": "Maltby",
+    "village": "Maltby",
+    "area": "Yorkshire",
+    "year": 2013
+   },
+   {
+    "name": "Welbeck",
+    "village": "Meden Vale",
+    "area": "Nottinghamshire",
+    "year": 2010
+   },
+   {
+    "name": "Tower",
+    "village": "Hirwaun",
+    "area": "Glamorgan",
+    "year": 2008
+   },
+   {
+    "name": "Rossington",
+    "village": "Rossington",
+    "area": "Yorkshire",
+    "year": 2007
+   },
+   {
+    "name": "Harworth",
+    "village": "Bircotes",
+    "area": "Nottinghamshire",
+    "year": 2006
+   },
+   {
+    "name": "Ellington",
+    "village": "Ellington",
+    "area": "Northumberland",
+    "year": 2005
+   },
+   {
+    "name": "Stillingfleet",
+    "village": "Stillingfleet",
+    "area": "Yorkshire",
+    "year": 2004
+   },
+   {
+    "name": "Riccall",
+    "village": "Riccall",
+    "area": "Yorkshire",
+    "year": 2004
+   }
+  ],
+  "by_area_detail": {
+   "Ayrshire": {
+    "n": 2,
+    "median_year": 1988.0,
+    "last": 1989,
+    "share_by_1987": 0.5
+   },
+   "Carmarthenshire": {
+    "n": 3,
+    "median_year": 1993.0,
+    "last": 1996,
+    "share_by_1987": 0.0
+   },
+   "Cumberland": {
+    "n": 1,
+    "median_year": 1986.0,
+    "last": 1986,
+    "share_by_1987": 1.0
+   },
+   "Derbyshire": {
+    "n": 10,
+    "median_year": 1989.0,
+    "last": 1994,
+    "share_by_1987": 0.3
+   },
+   "Durham": {
+    "n": 12,
+    "median_year": 1991.0,
+    "last": 1994,
+    "share_by_1987": 0.3333333333333333
+   },
+   "Fife": {
+    "n": 4,
+    "median_year": 1991.5,
+    "last": 2002,
+    "share_by_1987": 0.25
+   },
+   "Flintshire": {
+    "n": 2,
+    "median_year": 1991.0,
+    "last": 1996,
+    "share_by_1987": 0.5
+   },
+   "Glamorgan": {
+    "n": 20,
+    "median_year": 1988.0,
+    "last": 2008,
+    "share_by_1987": 0.45
+   },
+   "Kent": {
+    "n": 3,
+    "median_year": 1987.0,
+    "last": 1989,
+    "share_by_1987": 0.6666666666666666
+   },
+   "Lancashire": {
+    "n": 8,
+    "median_year": 1990.5,
+    "last": 1993,
+    "share_by_1987": 0.25
+   },
+   "Leicestershire": {
+    "n": 11,
+    "median_year": 1986.0,
+    "last": 1997,
+    "share_by_1987": 0.5454545454545454
+   },
+   "Midlothian": {
+    "n": 2,
+    "median_year": 1993.5,
+    "last": 1998,
+    "share_by_1987": 0.0
+   },
+   "Monmouthshire": {
+    "n": 10,
+    "median_year": 1985.0,
+    "last": 1989,
+    "share_by_1987": 0.7
+   },
+   "Northumberland": {
+    "n": 6,
+    "median_year": 1986.5,
+    "last": 2005,
+    "share_by_1987": 0.6666666666666666
+   },
+   "Nottinghamshire": {
+    "n": 26,
+    "median_year": 1992.0,
+    "last": 2015,
+    "share_by_1987": 0.23076923076923078
+   },
+   "Staffordshire": {
+    "n": 10,
+    "median_year": 1992.0,
+    "last": 2013,
+    "share_by_1987": 0.2
+   },
+   "Stirlingshire": {
+    "n": 1,
+    "median_year": 1987.0,
+    "last": 1987,
+    "share_by_1987": 1.0
+   },
+   "Warwickshire": {
+    "n": 2,
+    "median_year": 1990.0,
+    "last": 1991,
+    "share_by_1987": 0.0
+   },
+   "West Lothian": {
+    "n": 1,
+    "median_year": 1986.0,
+    "last": 1986,
+    "share_by_1987": 1.0
+   },
+   "Yorkshire": {
+    "n": 62,
+    "median_year": 1989.0,
+    "last": 2015,
+    "share_by_1987": 0.3870967741935484
+   }
+  },
+  "by_country_detail": {
+   "England": {
+    "n": 151,
+    "median_year": 1990.0,
+    "last": 2015,
+    "share_by_1987": 0.3576158940397351,
+    "share_by_1994": 0.847682119205298
+   },
+   "Scotland": {
+    "n": 10,
+    "median_year": 1988.5,
+    "last": 2002,
+    "share_by_1987": 0.4,
+    "share_by_1994": 0.7
+   },
+   "Wales": {
+    "n": 35,
+    "median_year": 1988.0,
+    "last": 2008,
+    "share_by_1987": 0.4857142857142857,
+    "share_by_1994": 0.9142857142857143
+   }
+  }
+ },
+ "context": {
+  "pits_1984_wiki": 173,
+  "strike_start": "6 March 1984",
+  "strike_end": "3 March 1985",
+  "kellingley_close": "18 December 2015",
+  "york_1984_wiki": 56,
+  "source": "Wikipedia, 1984 to 1985 United Kingdom miners' strike; List of collieries in Yorkshire (1984 to 2015) (CC BY-SA 4.0), retrieved 28 October 2026"
+ },
+ "towns": {
+  "n_bua_gb": 8535,
+  "n_bua_ew": 4158,
+  "n_sample": 2587,
+  "groups_sample": {
+   "pit": 209,
+   "near": 360,
+   "older": 80,
+   "none": 1938
+  },
+  "groups_gb": {
+   "pit": 379,
+   "near": 891,
+   "older": 249,
+   "none": 7016
+  },
+  "groups_scotland": {
+   "pit": 20,
+   "near": 96,
+   "older": 79,
+   "none": 627
+  },
+  "n_pit_ew": 293,
+  "pop_pit_ew": 5103194,
+  "pop_pit_sample": 2850284,
+  "n_pit_scotland": 20,
+  "medians": {
+   "pit": {
+    "n": 209,
+    "median_pop": 7171.0,
+    "median_km_city": 17.8
+   },
+   "near": {
+    "n": 360,
+    "median_pop": 6236.5,
+    "median_km_city": 13.14
+   },
+   "older": {
+    "n": 80,
+    "median_pop": 7222.0,
+    "median_km_city": 18.875
+   },
+   "none": {
+    "n": 1938,
+    "median_pop": 4839.5,
+    "median_km_city": 17.134999999999998
+   }
+  },
+  "by_region": [
+   {
+    "region": "Yorkshire and The Humber",
+    "n": 261,
+    "pit": 69,
+    "share_pit": 0.26436781609195403
+   },
+   {
+    "region": "East Midlands",
+    "n": 307,
+    "pit": 56,
+    "share_pit": 0.18241042345276873
+   },
+   {
+    "region": "Wales",
+    "n": 226,
+    "pit": 39,
+    "share_pit": 0.17256637168141592
+   },
+   {
+    "region": "North East",
+    "n": 137,
+    "pit": 20,
+    "share_pit": 0.145985401459854
+   },
+   {
+    "region": "West Midlands",
+    "n": 193,
+    "pit": 12,
+    "share_pit": 0.06217616580310881
+   },
+   {
+    "region": "North West",
+    "n": 273,
+    "pit": 12,
+    "share_pit": 0.04395604395604396
+   },
+   {
+    "region": "South East",
+    "n": 468,
+    "pit": 1,
+    "share_pit": 0.002136752136752137
+   },
+   {
+    "region": "East of England",
+    "n": 386,
+    "pit": 0,
+    "share_pit": 0.0
+   },
+   {
+    "region": "London",
+    "n": 1,
+    "pit": 0,
+    "share_pit": 0.0
+   },
+   {
+    "region": "South West",
+    "n": 335,
+    "pit": 0,
+    "share_pit": 0.0
+   }
+  ],
+  "by_coalfield": [
+   {
+    "area": "Yorkshire",
+    "n": 71,
+    "median_last": 1991.0
+   },
+   {
+    "area": "Nottinghamshire",
+    "n": 33,
+    "median_last": 1992.0
+   },
+   {
+    "area": "Glamorgan",
+    "n": 21,
+    "median_last": 1988.0
+   },
+   {
+    "area": "Durham",
+    "n": 14,
+    "median_last": 1991.5
+   },
+   {
+    "area": "Leicestershire",
+    "n": 12,
+    "median_last": 1990.0
+   },
+   {
+    "area": "Lancashire",
+    "n": 11,
+    "median_last": 1991.0
+   },
+   {
+    "area": "Monmouthshire",
+    "n": 10,
+    "median_last": 1987.0
+   },
+   {
+    "area": "Derbyshire",
+    "n": 9,
+    "median_last": 1991.0
+   },
+   {
+    "area": "Staffordshire",
+    "n": 9,
+    "median_last": 1993.0
+   },
+   {
+    "area": "Northumberland",
+    "n": 6,
+    "median_last": 1990.0
+   },
+   {
+    "area": "Carmarthenshire",
+    "n": 5,
+    "median_last": 1993.0
+   },
+   {
+    "area": "Flintshire",
+    "n": 3,
+    "median_last": 1986.0
+   },
+   {
+    "area": "Warwickshire",
+    "n": 3,
+    "median_last": 1991.0
+   },
+   {
+    "area": "Cumberland",
+    "n": 1,
+    "median_last": 1986.0
+   },
+   {
+    "area": "Kent",
+    "n": 1,
+    "median_last": 1987.0
+   }
+  ],
+  "pit_last_wave": {
+   "1984 to 1987": 59,
+   "1988 to 1994": 121,
+   "1995 to 2015": 29
+  },
+  "top_pit": [
+   {
+    "name": "St Helens (St. Helens)",
+    "pop": 98835,
+    "region": "North West",
+    "pits": "Bold (1985); Sutton Manor (1991)",
+    "last": 1991,
+    "sick": 0.0784,
+    "inact": 0.1615,
+    "inc": 38913
+   },
+   {
+    "name": "Doncaster",
+    "pop": 86524,
+    "region": "Yorkshire and The Humber",
+    "pits": "Markham Main (1996); Rossington (2007)",
+    "last": 2007,
+    "sick": 0.0556,
+    "inact": 0.1641,
+    "inc": 42828
+   },
+   {
+    "name": "Newcastle-under-Lyme",
+    "pop": 76230,
+    "region": "West Midlands",
+    "pits": "Wolstanton (1985); Holditch (1989); Silverdale (1998)",
+    "last": 1998,
+    "sick": 0.0506,
+    "inact": 0.1121,
+    "inc": 46472
+   },
+   {
+    "name": "Rotherham",
+    "pop": 72508,
+    "region": "Yorkshire and The Humber",
+    "pits": "Silverwood (1994)",
+    "last": 1994,
+    "sick": 0.075,
+    "inact": 0.2023,
+    "inc": 41856
+   },
+   {
+    "name": "South Shields",
+    "pop": 72213,
+    "region": "North East",
+    "pits": "Westoe (1993)",
+    "last": 1993,
+    "sick": 0.0695,
+    "inact": 0.1655,
+    "inc": 41213
+   },
+   {
+    "name": "Barnsley",
+    "pop": 71106,
+    "region": "Yorkshire and The Humber",
+    "pits": "North Gawber (1985); Barrow (1985); Dodworth (1987); Redbrook (1987); Royston (1989); Barnsley Main (1991)",
+    "last": 1991,
+    "sick": 0.0692,
+    "inact": 0.1556,
+    "inc": 39230
+   },
+   {
+    "name": "Mansfield",
+    "pop": 61294,
+    "region": "East Midlands",
+    "pits": "Mansfield (1988); Sherwood (1992)",
+    "last": 1992,
+    "sick": 0.0608,
+    "inact": 0.1378,
+    "inc": 42495
+   },
+   {
+    "name": "Cannock",
+    "pop": 60944,
+    "region": "West Midlands",
+    "pits": "Littleton (1993)",
+    "last": 1993,
+    "sick": 0.0512,
+    "inact": 0.1232,
+    "inc": 47479
+   },
+   {
+    "name": "Widnes",
+    "pop": 60259,
+    "region": "North West",
+    "pits": "Cronton (1984)",
+    "last": 1984,
+    "sick": 0.0621,
+    "inact": 0.1333,
+    "inc": 44580
+   },
+   {
+    "name": "Tynemouth",
+    "pop": 59938,
+    "region": "North East",
+    "pits": "Westoe (1993)",
+    "last": 1993,
+    "sick": 0.054,
+    "inact": 0.1257,
+    "inc": 46862
+   },
+   {
+    "name": "Carlton (Gedling)",
+    "pop": 51704,
+    "region": "East Midlands",
+    "pits": "Gedling (1991)",
+    "last": 1991,
+    "sick": 0.0431,
+    "inact": 0.1033,
+    "inc": 49198
+   },
+   {
+    "name": "Durham",
+    "pop": 48738,
+    "region": "North East",
+    "pits": "Bearpark (1984)",
+    "last": 1984,
+    "sick": 0.028,
+    "inact": 0.0881,
+    "inc": 54592
+   },
+   {
+    "name": "Castleford",
+    "pop": 44293,
+    "region": "Yorkshire and The Humber",
+    "pits": "Fryston (1985); Ledston Luck (1986); Glasshoughton (1986); Wheldale (1987); Allerton Bywater (1992); Prince of Wales (2002)",
+    "last": 2002,
+    "sick": 0.0652,
+    "inact": 0.1511,
+    "inc": 42220
+   },
+   {
+    "name": "Wrexham",
+    "pop": 44280,
+    "region": "Wales",
+    "pits": "Bersham (1986)",
+    "last": 1986,
+    "sick": 0.0581,
+    "inact": 0.1305,
+    "inc": 41602
+   },
+   {
+    "name": "Leigh (Wigan)",
+    "pop": 43532,
+    "region": "North West",
+    "pits": "Parsonage (1992); Bickershaw (1992)",
+    "last": 1992,
+    "sick": 0.0632,
+    "inact": 0.1465,
+    "inc": 39352
+   },
+   {
+    "name": "Worksop",
+    "pop": 42318,
+    "region": "East Midlands",
+    "pits": "Shireoaks (1990); Manton (1994)",
+    "last": 1994,
+    "sick": 0.0523,
+    "inact": 0.1188,
+    "inc": 44849
+   },
+   {
+    "name": "Arnold",
+    "pop": 39183,
+    "region": "East Midlands",
+    "pits": "Gedling (1991)",
+    "last": 1991,
+    "sick": 0.0398,
+    "inact": 0.0965,
+    "inc": 51180
+   },
+   {
+    "name": "Prescot",
+    "pop": 38895,
+    "region": "North West",
+    "pits": "Cronton (1984)",
+    "last": 1984,
+    "sick": 0.0587,
+    "inact": 0.1283,
+    "inc": 42983
+   },
+   {
+    "name": "Blyth (Northumberland)",
+    "pop": 38691,
+    "region": "North East",
+    "pits": "Bates (1986)",
+    "last": 1986,
+    "sick": 0.0675,
+    "inact": 0.154,
+    "inc": 42358
+   },
+   {
+    "name": "Sutton in Ashfield",
+    "pop": 37757,
+    "region": "East Midlands",
+    "pits": "Sutton (1989); Silverhill (1992); Bentinck (2000)",
+    "last": 2000,
+    "sick": 0.0668,
+    "inact": 0.1436,
+    "inc": 42231
+   },
+   {
+    "name": "Hucknall",
+    "pop": 36437,
+    "region": "East Midlands",
+    "pits": "Hucknall (1986); Linby (1988)",
+    "last": 1988,
+    "sick": 0.0504,
+    "inact": 0.1179,
+    "inc": 47247
+   },
+   {
+    "name": "Swadlincote",
+    "pop": 33994,
+    "region": "East Midlands",
+    "pits": "Cadley Hill (1988)",
+    "last": 1988,
+    "sick": 0.047,
+    "inact": 0.1164,
+    "inc": 47899
+   },
+   {
+    "name": "Pontefract",
+    "pop": 32973,
+    "region": "Yorkshire and The Humber",
+    "pits": "Prince of Wales (2002)",
+    "last": 2002,
+    "sick": 0.0556,
+    "inact": 0.1249,
+    "inc": 46443
+   },
+   {
+    "name": "Caerphilly",
+    "pop": 31965,
+    "region": "Wales",
+    "pits": "Bedwas (1985); Nantgarw-Windsor (1986)",
+    "last": 1986,
+    "sick": 0.0644,
+    "inact": 0.1375,
+    "inc": 46414
+   },
+   {
+    "name": "Prestwich",
+    "pop": 31334,
+    "region": "North West",
+    "pits": "Agecroft (1990)",
+    "last": 1990,
+    "sick": 0.0447,
+    "inact": 0.123,
+    "inc": 54743
+   }
+  ],
+  "top_sick": [
+   {
+    "name": "Denaby Main",
+    "pop": 5151,
+    "region": "Yorkshire and The Humber",
+    "pits": "Cadeby & Denaby (1986)",
+    "last": 1986,
+    "sick": 0.1333,
+    "inact": 0.2472,
+    "inc": null
+   },
+   {
+    "name": "Horden",
+    "pop": 7204,
+    "region": "North East",
+    "pits": "Horden (1986); Easington (1993)",
+    "last": 1993,
+    "sick": 0.1088,
+    "inact": 0.2149,
+    "inc": 29696
+   },
+   {
+    "name": "Grimethorpe",
+    "pop": 6006,
+    "region": "Yorkshire and The Humber",
+    "pits": "Grimethorpe (1993)",
+    "last": 1993,
+    "sick": 0.1028,
+    "inact": 0.217,
+    "inc": 39207
+   },
+   {
+    "name": "Maesteg",
+    "pop": 18555,
+    "region": "Wales",
+    "pits": "St John's (1985)",
+    "last": 1985,
+    "sick": 0.0922,
+    "inact": 0.1814,
+    "inc": 37985
+   },
+   {
+    "name": "Thurnscoe",
+    "pop": 9517,
+    "region": "Yorkshire and The Humber",
+    "pits": "Highgate (1985); Hickleton Main (1986); Goldthorpe (1994)",
+    "last": 1994,
+    "sick": 0.0921,
+    "inact": 0.2073,
+    "inc": 35132
+   },
+   {
+    "name": "Peterlee",
+    "pop": 20328,
+    "region": "North East",
+    "pits": "Horden (1986); Easington (1993)",
+    "last": 1993,
+    "sick": 0.0916,
+    "inact": 0.1888,
+    "inc": 38400
+   },
+   {
+    "name": "Mountain Ash",
+    "pop": 11547,
+    "region": "Wales",
+    "pits": "Penrikyber (1985); Merthyr Vale (1989)",
+    "last": 1989,
+    "sick": 0.091,
+    "inact": 0.1841,
+    "inc": 39266
+   },
+   {
+    "name": "Worsbrough",
+    "pop": 9434,
+    "region": "Yorkshire and The Humber",
+    "pits": "Barrow (1985); Barnsley Main (1991)",
+    "last": 1991,
+    "sick": 0.0897,
+    "inact": 0.1809,
+    "inc": 37144
+   },
+   {
+    "name": "Hemsworth",
+    "pop": 9582,
+    "region": "Yorkshire and The Humber",
+    "pits": "Ferrymoor and Riddings (1985); Kinsley (1986); South Kirkby (1988)",
+    "last": 1988,
+    "sick": 0.0872,
+    "inact": 0.1623,
+    "inc": 36524
+   },
+   {
+    "name": "Abertillery",
+    "pop": 10877,
+    "region": "Wales",
+    "pits": "Abertillery (1985); Six Bells (1987); Marine (1989)",
+    "last": 1989,
+    "sick": 0.0859,
+    "inact": 0.1805,
+    "inc": 38499
+   },
+   {
+    "name": "Abersychan",
+    "pop": 7043,
+    "region": "Wales",
+    "pits": "Blaenserchan (1985)",
+    "last": 1985,
+    "sick": 0.0845,
+    "inact": 0.1709,
+    "inc": 39289
+   },
+   {
+    "name": "South Kirkby",
+    "pop": 8647,
+    "region": "Yorkshire and The Humber",
+    "pits": "Ferrymoor and Riddings (1985); South Kirkby (1988)",
+    "last": 1988,
+    "sick": 0.0845,
+    "inact": 0.1766,
+    "inc": 39473
+   }
+  ],
+  "n_pits_placed_in_sample_towns": 165
+ },
+ "outcomes": {
+  "labels": {
+   "pct_sick": "Adults long-term sick or disabled",
+   "pct_inactive_working_age": "Adults inactive (not retired or students)",
+   "pct_in_work": "Adults (16+) in work",
+   "pct_routine": "Adults in routine or semi-routine jobs",
+   "pct_managerial": "Adults in managerial or professional jobs",
+   "pct_65plus": "Aged 65 or over",
+   "pct_no_car": "Households without a car or van",
+   "income_fye2023": "Mean household income (MSOA, FYE2023)"
+  },
+  "median": {
+   "pit": {
+    "n": 209,
+    "pct_sick": 0.0581,
+    "pct_sick_n": 209,
+    "pct_inactive_working_age": 0.1313,
+    "pct_inactive_working_age_n": 209,
+    "pct_in_work": 0.5606,
+    "pct_in_work_n": 209,
+    "pct_routine": 0.3281,
+    "pct_routine_n": 209,
+    "pct_managerial": 0.2725,
+    "pct_managerial_n": 209,
+    "pct_65plus": 0.1991,
+    "pct_65plus_n": 209,
+    "pct_no_car": 0.1994,
+    "pct_no_car_n": 209,
+    "income_fye2023": 43082.0,
+    "income_fye2023_n": 148
+   },
+   "near": {
+    "n": 360,
+    "pct_sick": 0.04605,
+    "pct_sick_n": 360,
+    "pct_inactive_working_age": 0.1096,
+    "pct_inactive_working_age_n": 360,
+    "pct_in_work": 0.55435,
+    "pct_in_work_n": 360,
+    "pct_routine": 0.2859,
+    "pct_routine_n": 360,
+    "pct_managerial": 0.316,
+    "pct_managerial_n": 360,
+    "pct_65plus": 0.2207,
+    "pct_65plus_n": 360,
+    "pct_no_car": 0.1714,
+    "pct_no_car_n": 360,
+    "income_fye2023": 46125.0,
+    "income_fye2023_n": 243
+   },
+   "older": {
+    "n": 80,
+    "pct_sick": 0.0494,
+    "pct_sick_n": 80,
+    "pct_inactive_working_age": 0.11795,
+    "pct_inactive_working_age_n": 80,
+    "pct_in_work": 0.5436000000000001,
+    "pct_in_work_n": 80,
+    "pct_routine": 0.2998,
+    "pct_routine_n": 80,
+    "pct_managerial": 0.3014,
+    "pct_managerial_n": 80,
+    "pct_65plus": 0.21645,
+    "pct_65plus_n": 80,
+    "pct_no_car": 0.1935,
+    "pct_no_car_n": 80,
+    "income_fye2023": 43644.0,
+    "income_fye2023_n": 50
+   },
+   "none": {
+    "n": 1938,
+    "pct_sick": 0.0292,
+    "pct_sick_n": 1938,
+    "pct_inactive_working_age": 0.08875,
+    "pct_inactive_working_age_n": 1938,
+    "pct_in_work": 0.5722,
+    "pct_in_work_n": 1938,
+    "pct_routine": 0.2231,
+    "pct_routine_n": 1938,
+    "pct_managerial": 0.3892,
+    "pct_managerial_n": 1938,
+    "pct_65plus": 0.23470000000000002,
+    "pct_65plus_n": 1938,
+    "pct_no_car": 0.11945,
+    "pct_no_car_n": 1938,
+    "income_fye2023": 55031.0,
+    "income_fye2023_n": 1141
+   }
+  },
+  "matched_pit": {
+   "pct_sick": {
+    "n": 209,
+    "diff": 0.014404306220095694,
+    "lo": 0.011062236842105262,
+    "hi": 0.017543899521531098,
+    "share_higher": 0.7511961722488039
+   },
+   "pct_inactive_working_age": {
+    "n": 209,
+    "diff": 0.022174641148325354,
+    "lo": 0.013394007177033493,
+    "hi": 0.03000637559808612,
+    "share_higher": 0.7081339712918661
+   },
+   "pct_in_work": {
+    "n": 209,
+    "diff": -0.0034679425837320604,
+    "lo": -0.012082547846889958,
+    "hi": 0.0050708732057416165,
+    "share_higher": 0.4784688995215311
+   },
+   "pct_routine": {
+    "n": 209,
+    "diff": 0.051672248803827744,
+    "lo": 0.04030311004784689,
+    "hi": 0.06402956937799044,
+    "share_higher": 0.7320574162679426
+   },
+   "pct_managerial": {
+    "n": 209,
+    "diff": -0.06734354066985647,
+    "lo": -0.08317627990430623,
+    "hi": -0.052227858851674656,
+    "share_higher": 0.2727272727272727
+   },
+   "pct_65plus": {
+    "n": 209,
+    "diff": -0.018357416267942583,
+    "lo": -0.0264361004784689,
+    "hi": -0.01024075358851675,
+    "share_higher": 0.4019138755980861
+   },
+   "pct_no_car": {
+    "n": 209,
+    "diff": 0.021709569377990432,
+    "lo": 0.011553947368421053,
+    "hi": 0.03208507177033492,
+    "share_higher": 0.6172248803827751
+   },
+   "income_fye2023": {
+    "n": 146,
+    "diff": -5097.7945205479455,
+    "lo": -6491.756164383562,
+    "hi": -3754.7121575342467,
+    "share_higher": 0.2534246575342466
+   }
+  },
+  "matched_older": {
+   "pct_sick": {
+    "n": 72,
+    "diff": -0.002872222222222223,
+    "lo": -0.009887638888888889,
+    "hi": 0.004059548611111103,
+    "share_higher": 0.4583333333333333
+   },
+   "pct_inactive_working_age": {
+    "n": 72,
+    "diff": -0.002972222222222224,
+    "lo": -0.01595670138888889,
+    "hi": 0.009328749999999992,
+    "share_higher": 0.5
+   },
+   "pct_in_work": {
+    "n": 72,
+    "diff": 0.0019749999999999946,
+    "lo": -0.011799375000000008,
+    "hi": 0.016609895833333322,
+    "share_higher": 0.5277777777777778
+   },
+   "pct_routine": {
+    "n": 72,
+    "diff": 0.01806805555555556,
+    "lo": -0.004774965277777774,
+    "hi": 0.040229930555555564,
+    "share_higher": 0.5972222222222222
+   },
+   "pct_managerial": {
+    "n": 72,
+    "diff": -0.021431944444444448,
+    "lo": -0.05279892361111112,
+    "hi": 0.009204687499999937,
+    "share_higher": 0.4305555555555556
+   },
+   "pct_65plus": {
+    "n": 72,
+    "diff": 0.00012083333333333428,
+    "lo": -0.013413506944444445,
+    "hi": 0.013550902777777733,
+    "share_higher": 0.5
+   },
+   "pct_no_car": {
+    "n": 72,
+    "diff": -0.0001250000000000001,
+    "lo": -0.01966649305555556,
+    "hi": 0.02118708333333331,
+    "share_higher": 0.5138888888888888
+   },
+   "income_fye2023": {
+    "n": 45,
+    "diff": -578.9777777777778,
+    "lo": -3378.4994444444446,
+    "hi": 2035.2272222222216,
+    "share_higher": 0.4666666666666667
+   }
+  },
+  "models": {
+   "pct_sick": {
+    "size_region_pit": {
+     "b": 0.020072906600255375,
+     "lo": 0.01714381860634563,
+     "hi": 0.023001994594165118,
+     "p": 3.9508761581666744e-41
+    },
+    "size_region_older": {
+     "b": 0.00888026592829981,
+     "lo": 0.004215971548660307,
+     "hi": 0.013544560307939314,
+     "p": 0.00019031272792812537
+    },
+    "size_region_near": {
+     "b": 0.0086167380472854,
+     "lo": 0.006401457655117107,
+     "hi": 0.010832018439453693,
+     "p": 2.4662397906519168e-14
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": 0.02081841304375371,
+     "lo": 0.017938735214231855,
+     "hi": 0.023698090873275564,
+     "p": 1.4168311674898102e-45
+    },
+    "plus_remote_older": {
+     "b": 0.009152241336553612,
+     "lo": 0.004494559887019786,
+     "hi": 0.013809922786087437,
+     "p": 0.00011749917623597622
+    },
+    "plus_remote_near": {
+     "b": 0.010274389680935634,
+     "lo": 0.008062697692276233,
+     "hi": 0.012486081669595035,
+     "p": 8.627427744911344e-20
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_inactive_working_age": {
+    "size_region_pit": {
+     "b": 0.03177924261636603,
+     "lo": 0.026145742812788208,
+     "hi": 0.03741274241994385,
+     "p": 2.0414965671434387e-28
+    },
+    "size_region_older": {
+     "b": 0.017934279389758882,
+     "lo": 0.008124012322283205,
+     "hi": 0.027744546457234558,
+     "p": 0.0003396235653168225
+    },
+    "size_region_near": {
+     "b": 0.01449668005534782,
+     "lo": 0.00858266299084451,
+     "hi": 0.020410697119851128,
+     "p": 1.5525990618635347e-06
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": 0.033005052052239726,
+     "lo": 0.027463194504728325,
+     "hi": 0.03854690959975113,
+     "p": 1.7565350936842386e-31
+    },
+    "plus_remote_older": {
+     "b": 0.018381478773038078,
+     "lo": 0.008426160270408234,
+     "hi": 0.028336797275667923,
+     "p": 0.00029588844386493765
+    },
+    "plus_remote_near": {
+     "b": 0.017222297025718782,
+     "lo": 0.011191525468852919,
+     "hi": 0.023253068582584645,
+     "p": 2.1791481635952698e-08
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_in_work": {
+    "size_region_pit": {
+     "b": 0.0018503266896913277,
+     "lo": -0.006168038452230722,
+     "hi": 0.009868691831613378,
+     "p": 0.6510648130777699
+    },
+    "size_region_older": {
+     "b": 0.00027223489504990723,
+     "lo": -0.010790213902204956,
+     "hi": 0.01133468369230477,
+     "p": 0.9615308750058545
+    },
+    "size_region_near": {
+     "b": -0.0016409777234349667,
+     "lo": -0.008219406520885014,
+     "hi": 0.004937451074015081,
+     "p": 0.6249056724574349
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": -0.0012693634484397575,
+     "lo": -0.00917569500168905,
+     "hi": 0.0066369681048095335,
+     "p": 0.7530101795025252
+    },
+    "plus_remote_older": {
+     "b": -0.0008658894046708363,
+     "lo": -0.012056937896094716,
+     "hi": 0.010325159086753043,
+     "p": 0.8794637320935678
+    },
+    "plus_remote_near": {
+     "b": -0.008577684305994973,
+     "lo": -0.015051350726837926,
+     "hi": -0.002104017885152019,
+     "p": 0.009404866502177492
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_routine": {
+    "size_region_pit": {
+     "b": 0.06450146883125336,
+     "lo": 0.05566608169916415,
+     "hi": 0.07333685596334258,
+     "p": 1.9382823699718833e-46
+    },
+    "size_region_older": {
+     "b": 0.04681857398262265,
+     "lo": 0.03142276607397282,
+     "hi": 0.062214381891272486,
+     "p": 2.5186687520566774e-09
+    },
+    "size_region_near": {
+     "b": 0.022376039152808443,
+     "lo": 0.013940632624834047,
+     "hi": 0.03081144568078284,
+     "p": 2.0029296793975136e-07
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": 0.06974077334417378,
+     "lo": 0.06171245953271376,
+     "hi": 0.0777690871556338,
+     "p": 5.275951150796156e-65
+    },
+    "plus_remote_older": {
+     "b": 0.04872997528075325,
+     "lo": 0.033971525881776994,
+     "hi": 0.06348842467972951,
+     "p": 9.704819774876919e-11
+    },
+    "plus_remote_near": {
+     "b": 0.034025759635812024,
+     "lo": 0.025928021028739777,
+     "hi": 0.04212349824288427,
+     "p": 1.7874707113232116e-16
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_managerial": {
+    "size_region_pit": {
+     "b": -0.07982400313352096,
+     "lo": -0.09099315321700914,
+     "hi": -0.06865485305003279,
+     "p": 1.4020262817485847e-44
+    },
+    "size_region_older": {
+     "b": -0.05379036790766002,
+     "lo": -0.0734832979357806,
+     "hi": -0.03409743787953945,
+     "p": 8.624280962327921e-08
+    },
+    "size_region_near": {
+     "b": -0.027451492677546936,
+     "lo": -0.03851233910573366,
+     "hi": -0.016390646249360215,
+     "p": 1.1482785271158258e-06
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": -0.08640869949727265,
+     "lo": -0.0966917256961086,
+     "hi": -0.0761256732984367,
+     "p": 6.061068020884715e-61
+    },
+    "plus_remote_older": {
+     "b": -0.056192594605198765,
+     "lo": -0.07528511247200545,
+     "hi": -0.037100076738392086,
+     "p": 7.997344578314494e-09
+    },
+    "plus_remote_near": {
+     "b": -0.0420927245269247,
+     "lo": -0.05280860989210802,
+     "hi": -0.03137683916174139,
+     "p": 1.3727316210192222e-14
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_65plus": {
+    "size_region_pit": {
+     "b": -0.03726014321141407,
+     "lo": -0.04389660469657487,
+     "hi": -0.030623681726253262,
+     "p": 3.6498926443489094e-28
+    },
+    "size_region_older": {
+     "b": -0.020045990882587073,
+     "lo": -0.02982005171052185,
+     "hi": -0.010271930054652295,
+     "p": 5.825641016724948e-05
+    },
+    "size_region_near": {
+     "b": -0.01561058799643106,
+     "lo": -0.02177485438795138,
+     "hi": -0.00944632160491074,
+     "p": 6.924248783684899e-07
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": -0.03479760601589918,
+     "lo": -0.04144326751988875,
+     "hi": -0.02815194451190961,
+     "p": 1.0382492207272652e-24
+    },
+    "plus_remote_older": {
+     "b": -0.019147608896849338,
+     "lo": -0.028666589544877136,
+     "hi": -0.009628628248821542,
+     "p": 8.063514432879173e-05
+    },
+    "plus_remote_near": {
+     "b": -0.010135076898344957,
+     "lo": -0.016350288596344877,
+     "hi": -0.003919865200345038,
+     "p": 0.0013930289492073205
+    },
+    "plus_remote_n": 2587
+   },
+   "pct_no_car": {
+    "size_region_pit": {
+     "b": 0.03698134757390144,
+     "lo": 0.028718592722480642,
+     "hi": 0.04524410242532223,
+     "p": 1.7528962390599888e-18
+    },
+    "size_region_older": {
+     "b": 0.021699296737898534,
+     "lo": 0.006681842046297293,
+     "hi": 0.036716751429499775,
+     "p": 0.0046253914496625645
+    },
+    "size_region_near": {
+     "b": 0.017263963482247655,
+     "lo": 0.010316265257055769,
+     "hi": 0.02421166170743954,
+     "p": 1.114799257976262e-06
+    },
+    "size_region_n": 2587,
+    "plus_remote_pit": {
+     "b": 0.03919779257692511,
+     "lo": 0.03103878523298341,
+     "hi": 0.047356799920866804,
+     "p": 4.680273137017456e-21
+    },
+    "plus_remote_older": {
+     "b": 0.022507899453310366,
+     "lo": 0.0075756454570889455,
+     "hi": 0.03744015344953179,
+     "p": 0.003133578281863776
+    },
+    "plus_remote_near": {
+     "b": 0.022192282629855686,
+     "lo": 0.01524922955764869,
+     "hi": 0.02913533570206268,
+     "p": 3.7356798005189574e-10
+    },
+    "plus_remote_n": 2587
+   },
+   "income_fye2023": {
+    "size_region_pit": {
+     "b": -5899.625192935266,
+     "lo": -7029.48169124111,
+     "hi": -4769.768694629422,
+     "p": 1.3950068549268761e-24
+    },
+    "size_region_older": {
+     "b": -3403.218785957283,
+     "lo": -5621.2499862027935,
+     "hi": -1185.1875857117725,
+     "p": 0.002636181995049854
+    },
+    "size_region_near": {
+     "b": -1581.0246996960518,
+     "lo": -2757.2653902253373,
+     "hi": -404.7840091667663,
+     "p": 0.008427283209236705
+    },
+    "size_region_n": 1582,
+    "plus_remote_pit": {
+     "b": -6017.887124992795,
+     "lo": -7060.036450975538,
+     "hi": -4975.737799010051,
+     "p": 1.0712146230411841e-29
+    },
+    "plus_remote_older": {
+     "b": -3548.418301728114,
+     "lo": -5620.109747359579,
+     "hi": -1476.7268560966488,
+     "p": 0.0007877882287738897
+    },
+    "plus_remote_near": {
+     "b": -2927.116925418499,
+     "lo": -4039.2794972016795,
+     "hi": -1814.9543536353183,
+     "p": 2.4899214060875203e-07
+    },
+    "plus_remote_n": 1582
+   }
+  }
+ },
+ "checks": {
+  "tight": {
+   "n_pit": 140,
+   "n_none": 1957,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.021543536379949237,
+      "lo": 0.01804445959504189,
+      "hi": 0.025042613164856585,
+      "p": 1.5712827252433375e-33
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": 0.022247896428448134,
+      "lo": 0.01882030883040573,
+      "hi": 0.025675484026490537,
+      "p": 4.474465062694685e-37
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.03456376507508678,
+      "lo": 0.027914853013400912,
+      "hi": 0.04121267713677265,
+      "p": 2.227347666995174e-24
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": 0.03567262089837365,
+      "lo": 0.02916327755696161,
+      "hi": 0.04218196423978569,
+      "p": 6.531161314797569e-27
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.0038455621316318966,
+      "lo": -0.006041857223678376,
+      "hi": 0.013732981486942169,
+      "p": 0.4458819694440981
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": 0.0008609404539887093,
+      "lo": -0.00890173274952726,
+      "hi": 0.010623613657504678,
+      "p": 0.8627746305874556
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.06685197373769175,
+      "lo": 0.05649036183501532,
+      "hi": 0.07721358564036818,
+      "p": 1.1851249458070223e-36
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": 0.07168703066831544,
+      "lo": 0.06240219009511304,
+      "hi": 0.08097187124151785,
+      "p": 9.868133482407042e-52
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.0803020854558238,
+      "lo": -0.09318457045827795,
+      "hi": -0.06741960045336966,
+      "p": 2.512899846366324e-34
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": -0.08650293241482711,
+      "lo": -0.09805492054417672,
+      "hi": -0.0749509442854775,
+      "p": 9.119089598446769e-49
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.04209786451730823,
+      "lo": -0.049615262785402486,
+      "hi": -0.03458046624921397,
+      "p": 4.99000128042554e-28
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": -0.039678826081856425,
+      "lo": -0.047229289007698246,
+      "hi": -0.032128363156014604,
+      "p": 7.052905317548492e-25
+     },
+     "plus_remote_n": 2097
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.036756954462105924,
+      "lo": 0.026931734938482034,
+      "hi": 0.046582173985729815,
+      "p": 2.260899413881425e-13
+     },
+     "size_region_n": 2097,
+     "plus_remote_pit": {
+      "b": 0.038963781581284475,
+      "lo": 0.029423007674786037,
+      "hi": 0.048504555487782916,
+      "p": 1.2010804732405717e-15
+     },
+     "plus_remote_n": 2097
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -5911.865280676244,
+      "lo": -7143.595593602597,
+      "hi": -4680.134967749891,
+      "p": 5.0988490990643335e-21
+     },
+     "size_region_n": 1260,
+     "plus_remote_pit": {
+      "b": -6057.4958238539175,
+      "lo": -7179.811309821254,
+      "hi": -4935.180337886582,
+      "p": 3.7470085191178497e-26
+     },
+     "plus_remote_n": 1260
+    }
+   }
+  },
+  "wide": {
+   "n_pit": 322,
+   "n_none": 1899,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.017338090466392318,
+      "lo": 0.01484890352063576,
+      "hi": 0.019827277412148875,
+      "p": 1.967894357235062e-42
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": 0.018526097531294118,
+      "lo": 0.01606548517493307,
+      "hi": 0.020986709887655167,
+      "p": 2.7863995620139916e-49
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.026583805409844594,
+      "lo": 0.02178244751490996,
+      "hi": 0.03138516330477923,
+      "p": 1.9556930106568397e-27
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": 0.028509819188189164,
+      "lo": 0.02374381861276374,
+      "hi": 0.033275819763614586,
+      "p": 9.564175873857177e-32
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.004640640564097649,
+      "lo": -0.00246629734751979,
+      "hi": 0.011747578475715089,
+      "p": 0.20061403696239222
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": -0.0003096297609256818,
+      "lo": -0.0073166982737954646,
+      "hi": 0.006697438751944102,
+      "p": 0.9309836750416263
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.054137677961788915,
+      "lo": 0.04565106414559582,
+      "hi": 0.06262429177798201,
+      "p": 7.191123300694832e-36
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": 0.06244935723005985,
+      "lo": 0.05454044760236531,
+      "hi": 0.07035826685775438,
+      "p": 5.0363854455158645e-54
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.06605716088431249,
+      "lo": -0.07675079284444807,
+      "hi": -0.05536352892417691,
+      "p": 9.677180396911232e-34
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": -0.07665846073676025,
+      "lo": -0.08672037290542113,
+      "hi": -0.06659654856809936,
+      "p": 2.0303655511467882e-50
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.03315120137211046,
+      "lo": -0.0395135408703933,
+      "hi": -0.02678886187382762,
+      "p": 1.7438000753336288e-24
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": -0.029248849334130682,
+      "lo": -0.03562224366950166,
+      "hi": -0.022875454998759707,
+      "p": 2.3690489689726013e-19
+     },
+     "plus_remote_n": 2221
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.03152079558260282,
+      "lo": 0.024192911961365852,
+      "hi": 0.03884867920383978,
+      "p": 3.434290523059252e-17
+     },
+     "size_region_n": 2221,
+     "plus_remote_pit": {
+      "b": 0.0350892585807135,
+      "lo": 0.02780167173628333,
+      "hi": 0.042376845425143674,
+      "p": 3.8324057739024575e-21
+     },
+     "plus_remote_n": 2221
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -4598.506039048378,
+      "lo": -5713.685563824281,
+      "hi": -3483.326514272474,
+      "p": 6.370125048104551e-16
+     },
+     "size_region_n": 1333,
+     "plus_remote_pit": {
+      "b": -5201.672310297059,
+      "lo": -6239.0653592696335,
+      "hi": -4164.279261324486,
+      "p": 8.562991977187167e-23
+     },
+     "plus_remote_n": 1333
+    }
+   }
+  },
+  "age_control": {
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.0208556100040848,
+      "lo": 0.01787229414701203,
+      "hi": 0.023838925861157566,
+      "p": 9.929134829364951e-43
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": 0.021285833775118848,
+      "lo": 0.01834655354388519,
+      "hi": 0.024225114006352508,
+      "p": 1.0012784962461506e-45
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.02870495557650248,
+      "lo": 0.02297455690713339,
+      "hi": 0.03443535424587157,
+      "p": 9.425487579991744e-23
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": 0.029551933853865203,
+      "lo": 0.023937687122778138,
+      "hi": 0.03516618058495227,
+      "p": 5.919888658872416e-25
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": -0.028298931370249438,
+      "lo": -0.03614216947953248,
+      "hi": -0.0204556932609664,
+      "p": 1.5306680061322262e-12
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": -0.028954034381527993,
+      "lo": -0.03669622483686278,
+      "hi": -0.021211843926193207,
+      "p": 2.304615801923117e-13
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.06377746557677144,
+      "lo": 0.054704207832984644,
+      "hi": 0.07285072332055824,
+      "p": 3.5093319156334872e-43
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": 0.06698203713659574,
+      "lo": 0.05877759319690288,
+      "hi": 0.0751864810762886,
+      "p": 1.2498487230400287e-57
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.08311142217586477,
+      "lo": -0.09465888419092826,
+      "hi": -0.07156396016080128,
+      "p": 3.458693085778182e-45
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": -0.08700039299189806,
+      "lo": -0.09765198733183521,
+      "hi": -0.07634879865196091,
+      "p": 1.1119786236440373e-57
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": 1.404583914454971e-16,
+      "lo": -1.699789018346184e-15,
+      "hi": 1.9807058012371782e-15,
+      "p": 0.8810834769504727
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": -5.846560215128083e-17,
+      "lo": -7.854809852696658e-16,
+      "hi": 6.685497809671042e-16,
+      "p": 0.8747580748488669
+     },
+     "plus_remote_n": 2147
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.039657132406808945,
+      "lo": 0.031041441781695666,
+      "hi": 0.04827282303192222,
+      "p": 1.8551192558625834e-19
+     },
+     "size_region_n": 2147,
+     "plus_remote_pit": {
+      "b": 0.040894356657250275,
+      "lo": 0.0324115122083671,
+      "hi": 0.04937720110613345,
+      "p": 3.4321400914638085e-21
+     },
+     "plus_remote_n": 2147
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -7332.928363037638,
+      "lo": -8550.183732181144,
+      "hi": -6115.672993894133,
+      "p": 3.586528615071499e-32
+     },
+     "size_region_n": 1289,
+     "plus_remote_pit": {
+      "b": -7231.984742097409,
+      "lo": -8361.647136678266,
+      "hi": -6102.322347516551,
+      "p": 4.103015442748777e-36
+     },
+     "plus_remote_n": 1289
+    }
+   }
+  },
+  "over5k": {
+   "n_pit": 138,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.01833070683421831,
+      "lo": 0.015085692319601256,
+      "hi": 0.021575721348835366,
+      "p": 1.7228319611559617e-28
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": 0.01824211555969907,
+      "lo": 0.015103417396543868,
+      "hi": 0.021380813722854275,
+      "p": 4.619814972221888e-30
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.031222785595214807,
+      "lo": 0.024999916386768153,
+      "hi": 0.037445654803661466,
+      "p": 8.038258235865807e-23
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": 0.031103585617239273,
+      "lo": 0.025049976796527627,
+      "hi": 0.037157194437950916,
+      "p": 7.471826133282293e-24
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": -0.003014773269263122,
+      "lo": -0.012009107496622061,
+      "hi": 0.005979560958095816,
+      "p": 0.5112116971426438
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": -0.002743486051683251,
+      "lo": -0.01156481965957278,
+      "hi": 0.006077847556206278,
+      "p": 0.5421531849430818
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.05761997523142379,
+      "lo": 0.046209201151400384,
+      "hi": 0.06903074931144719,
+      "p": 4.2870699983887274e-23
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": 0.05704754561119835,
+      "lo": 0.04708085262939091,
+      "hi": 0.06701423859300579,
+      "p": 3.309132324853612e-29
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.07674795765958846,
+      "lo": -0.09062892773427504,
+      "hi": -0.06286698758490188,
+      "p": 2.3076383635685594e-27
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": -0.07612727076697583,
+      "lo": -0.08867509324879722,
+      "hi": -0.06357944828515444,
+      "p": 1.31749378276908e-32
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.026391209887800665,
+      "lo": -0.0340871237630652,
+      "hi": -0.018695296012536132,
+      "p": 1.8022684067246418e-11
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": -0.026565843070879155,
+      "lo": -0.0343765071271191,
+      "hi": -0.01875517901463921,
+      "p": 2.6236344742798934e-11
+     },
+     "plus_remote_n": 1070
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.029515728070485258,
+      "lo": 0.019614985112051765,
+      "hi": 0.03941647102891875,
+      "p": 5.127763574581897e-09
+     },
+     "size_region_n": 1070,
+     "plus_remote_pit": {
+      "b": 0.029210986070266644,
+      "lo": 0.0196625370963423,
+      "hi": 0.03875943504419099,
+      "p": 2.0223954851219666e-09
+     },
+     "plus_remote_n": 1070
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -5228.230835738385,
+      "lo": -6485.7913818238585,
+      "hi": -3970.670289652912,
+      "p": 3.6867921256527183e-16
+     },
+     "size_region_n": 1000,
+     "plus_remote_pit": {
+      "b": -5242.352701832499,
+      "lo": -6400.0701960189535,
+      "hi": -4084.635207646045,
+      "p": 6.989015435337556e-19
+     },
+     "plus_remote_n": 1000
+    }
+   }
+  },
+  "england": {
+   "n_pit": 170,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.01839268103224517,
+      "lo": 0.015234481751881367,
+      "hi": 0.02155088031260897,
+      "p": 3.542858381368268e-30
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": 0.01859342720195997,
+      "lo": 0.015509898793080498,
+      "hi": 0.02167695561083944,
+      "p": 3.135088987915275e-32
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.029684525930155126,
+      "lo": 0.0234590262581474,
+      "hi": 0.03591002560216285,
+      "p": 9.142931881695546e-21
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": 0.030001470380601265,
+      "lo": 0.023899395060254795,
+      "hi": 0.03610354570094773,
+      "p": 5.614294083424541e-22
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.003152209916147367,
+      "lo": -0.006153129501141108,
+      "hi": 0.012457549333435843,
+      "p": 0.5067265913891104
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": 0.0022929060651636583,
+      "lo": -0.006953932096353532,
+      "hi": 0.011539744226680849,
+      "p": 0.6269633351424253
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.06338290511705971,
+      "lo": 0.053549679002929576,
+      "hi": 0.07321613123118985,
+      "p": 1.3797410279805535e-36
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": 0.06476335032628566,
+      "lo": 0.05586718965254986,
+      "hi": 0.07365951100002147,
+      "p": 3.4446996608271857e-46
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.07776084988609162,
+      "lo": -0.09034407863697223,
+      "hi": -0.06517762113521101,
+      "p": 9.120665149151338e-34
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": -0.07951692583448422,
+      "lo": -0.09107491722047352,
+      "hi": -0.06795893444849492,
+      "p": 1.9374583238005395e-41
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.03769877565249052,
+      "lo": -0.04549684028459543,
+      "hi": -0.02990071102038561,
+      "p": 2.66243451230046e-21
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": -0.03696018871178631,
+      "lo": -0.04474853964860476,
+      "hi": -0.029171837774967856,
+      "p": 1.389316350857258e-20
+     },
+     "plus_remote_n": 2018
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.036375609464018514,
+      "lo": 0.027593125917611604,
+      "hi": 0.04515809301042542,
+      "p": 4.745145853036741e-16
+     },
+     "size_region_n": 2018,
+     "plus_remote_pit": {
+      "b": 0.036911691551237545,
+      "lo": 0.028199403796776858,
+      "hi": 0.04562397930569823,
+      "p": 1.0078548198213756e-16
+     },
+     "plus_remote_n": 2018
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -6008.005499430711,
+      "lo": -7302.909706320012,
+      "hi": -4713.101292541409,
+      "p": 9.572201154013073e-20
+     },
+     "size_region_n": 1222,
+     "plus_remote_pit": {
+      "b": -5685.987903337075,
+      "lo": -6877.285183551365,
+      "hi": -4494.690623122786,
+      "p": 8.376886286108167e-21
+     },
+     "plus_remote_n": 1222
+    }
+   }
+  },
+  "wales": {
+   "n_pit": 39,
+   "n_none": 90,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.027424161328216276,
+      "lo": 0.01978039531078147,
+      "hi": 0.03506792734565108,
+      "p": 2.0370728090746773e-12
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": 0.03398032340679736,
+      "lo": 0.02548423088539634,
+      "hi": 0.04247641592819838,
+      "p": 4.5442922163809546e-15
+     },
+     "plus_remote_n": 129
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.039118437658942996,
+      "lo": 0.025937597685251796,
+      "hi": 0.0522992776326342,
+      "p": 5.9973438660325365e-09
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": 0.049001518105936205,
+      "lo": 0.034319294881902836,
+      "hi": 0.06368374132996958,
+      "p": 6.097568958443402e-11
+     },
+     "plus_remote_n": 129
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.007140416248039559,
+      "lo": -0.00987962574945199,
+      "hi": 0.024160458245531105,
+      "p": 0.41092696623752545
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": -0.011917313549401372,
+      "lo": -0.032660607515825224,
+      "hi": 0.008825980417022478,
+      "p": 0.26015416705438543
+     },
+     "plus_remote_n": 129
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.06272550097025544,
+      "lo": 0.04146053350068209,
+      "hi": 0.08399046843982878,
+      "p": 7.411383185413574e-09
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": 0.09929536441492756,
+      "lo": 0.07737142504625885,
+      "hi": 0.12121930378359627,
+      "p": 6.878561974799934e-19
+     },
+     "plus_remote_n": 129
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.07576850252359535,
+      "lo": -0.10109058292397156,
+      "hi": -0.050446422123219134,
+      "p": 4.5025276711205596e-09
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": -0.1248877475447209,
+      "lo": -0.15080713408085594,
+      "hi": -0.09896836100858586,
+      "p": 3.5976679618162084e-21
+     },
+     "plus_remote_n": 129
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.04300750851171189,
+      "lo": -0.056505128817277,
+      "hi": -0.029509888206146778,
+      "p": 4.23693875490698e-10
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": -0.04093720825006193,
+      "lo": -0.05890608945716554,
+      "hi": -0.02296832704295832,
+      "p": 7.997724361436401e-06
+     },
+     "plus_remote_n": 129
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.028790167455002846,
+      "lo": 0.005746926868852996,
+      "hi": 0.0518334080411527,
+      "p": 0.014334330772368502
+     },
+     "size_region_n": 129,
+     "plus_remote_pit": {
+      "b": 0.06272793991756254,
+      "lo": 0.039968770350182994,
+      "hi": 0.08548710948494208,
+      "p": 6.591052359667063e-08
+     },
+     "plus_remote_n": 129
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -3594.256112782564,
+      "lo": -5608.2680743511855,
+      "hi": -1580.244151213942,
+      "p": 0.0004691114761483352
+     },
+     "size_region_n": 67,
+     "plus_remote_pit": {
+      "b": -6236.222690648555,
+      "lo": -8648.694310938094,
+      "hi": -3823.751070359016,
+      "p": 4.052105013543195e-07
+     },
+     "plus_remote_n": 67
+    }
+   }
+  },
+  "away_from_cities": {
+   "n_pit": 137,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.021872598981453446,
+      "lo": 0.017882919247444673,
+      "hi": 0.02586227871546222,
+      "p": 6.249441158875904e-27
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": 0.025212148343264705,
+      "lo": 0.02117604603375923,
+      "hi": 0.02924825065277018,
+      "p": 1.8263229399305845e-34
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.033779179172502484,
+      "lo": 0.026273720990638457,
+      "hi": 0.04128463735436651,
+      "p": 1.1339774956243445e-18
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": 0.03808237871095534,
+      "lo": 0.030237750009825922,
+      "hi": 0.04592700741208476,
+      "p": 1.8205884817700425e-21
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.010729225378468224,
+      "lo": 0.0003376265536451945,
+      "hi": 0.021120824203291255,
+      "p": 0.04300680711909457
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": -0.0032782253516217413,
+      "lo": -0.014169953091965308,
+      "hi": 0.007613502388721825,
+      "p": 0.5552470183837539
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.05969256107917713,
+      "lo": 0.04880241114824314,
+      "hi": 0.07058271101011113,
+      "p": 6.378071784267502e-27
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": 0.07909731285462278,
+      "lo": 0.0680191442380265,
+      "hi": 0.09017548147121905,
+      "p": 1.6959996644625055e-44
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.07133803660805449,
+      "lo": -0.08490194324544978,
+      "hi": -0.0577741299706592,
+      "p": 6.467596541635878e-25
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": -0.09958343699292616,
+      "lo": -0.11339512807683083,
+      "hi": -0.08577174590902148,
+      "p": 2.429050781120105e-45
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.047048497055245275,
+      "lo": -0.05559936264247566,
+      "hi": -0.03849763146801489,
+      "p": 4.092449209565678e-27
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": -0.03761986324144778,
+      "lo": -0.04674900181764164,
+      "hi": -0.028490724665253923,
+      "p": 6.652724087173705e-16
+     },
+     "plus_remote_n": 1252
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.03264672998249657,
+      "lo": 0.02172424045886619,
+      "hi": 0.04356921950612695,
+      "p": 4.678369692690645e-09
+     },
+     "size_region_n": 1252,
+     "plus_remote_pit": {
+      "b": 0.04795979731814484,
+      "lo": 0.03706085514981208,
+      "hi": 0.0588587394864776,
+      "p": 6.4293404566075615e-18
+     },
+     "plus_remote_n": 1252
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -4430.117337524103,
+      "lo": -5902.318790346763,
+      "hi": -2957.915884701443,
+      "p": 3.6819715428494255e-09
+     },
+     "size_region_n": 692,
+     "plus_remote_pit": {
+      "b": -6829.154245777277,
+      "lo": -8387.430583663623,
+      "hi": -5270.87790789093,
+      "p": 8.730872798189563e-18
+     },
+     "plus_remote_n": 692
+    }
+   }
+  },
+  "coal_regions": {
+   "regions": [
+    "Yorkshire and The Humber",
+    "East Midlands",
+    "Wales",
+    "North East",
+    "West Midlands",
+    "North West"
+   ],
+   "n_pit": 208,
+   "n_none": 764,
+   "models": {
+    "pct_sick": {
+     "size_region_pit": {
+      "b": 0.01963657797140704,
+      "lo": 0.016602213472480743,
+      "hi": 0.022670942470333338,
+      "p": 7.2806816278156745e-37
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": 0.020214644245445248,
+      "lo": 0.01720513295342544,
+      "hi": 0.023224155537465055,
+      "p": 1.3968595301907956e-39
+     },
+     "plus_remote_n": 972
+    },
+    "pct_inactive_working_age": {
+     "size_region_pit": {
+      "b": 0.030711506177429505,
+      "lo": 0.024970765779483414,
+      "hi": 0.036452246575375595,
+      "p": 1.009135589047849e-25
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": 0.031679277567537384,
+      "lo": 0.025971934876009788,
+      "hi": 0.03738662025906498,
+      "p": 1.4512922998397397e-27
+     },
+     "plus_remote_n": 972
+    },
+    "pct_in_work": {
+     "size_region_pit": {
+      "b": 0.0043732985373588565,
+      "lo": -0.003960634477764525,
+      "hi": 0.012707231552482238,
+      "p": 0.3037114458498479
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": 0.0016566881382941157,
+      "lo": -0.006438370255988568,
+      "hi": 0.009751746532576799,
+      "p": 0.6883354815789382
+     },
+     "plus_remote_n": 972
+    },
+    "pct_routine": {
+     "size_region_pit": {
+      "b": 0.06181110454839241,
+      "lo": 0.05261293900499995,
+      "hi": 0.07100927009178487,
+      "p": 1.2915785715952041e-39
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": 0.06759931262729113,
+      "lo": 0.05904083890907426,
+      "hi": 0.076157786345508,
+      "p": 4.674530915937159e-54
+     },
+     "plus_remote_n": 972
+    },
+    "pct_managerial": {
+     "size_region_pit": {
+      "b": -0.07528977714992349,
+      "lo": -0.0869084227063912,
+      "hi": -0.06367113159345579,
+      "p": 5.858254690047853e-37
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": -0.08223468653253166,
+      "lo": -0.09318658066292476,
+      "hi": -0.07128279240213856,
+      "p": 5.0277275993776045e-49
+     },
+     "plus_remote_n": 972
+    },
+    "pct_65plus": {
+     "size_region_pit": {
+      "b": -0.03807094877252593,
+      "lo": -0.044928182930399525,
+      "hi": -0.031213714614652336,
+      "p": 1.4106277420209821e-27
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": -0.035768025387643836,
+      "lo": -0.04251939908203432,
+      "hi": -0.029016651693253348,
+      "p": 2.9423940043900765e-25
+     },
+     "plus_remote_n": 972
+    },
+    "pct_no_car": {
+     "size_region_pit": {
+      "b": 0.03348028765857961,
+      "lo": 0.02488768756324377,
+      "hi": 0.042072887753915454,
+      "p": 2.2264886314749703e-14
+     },
+     "size_region_n": 972,
+     "plus_remote_pit": {
+      "b": 0.03576645451835183,
+      "lo": 0.0272254028506516,
+      "hi": 0.04430750618605206,
+      "p": 2.257795741744586e-16
+     },
+     "plus_remote_n": 972
+    },
+    "income_fye2023": {
+     "size_region_pit": {
+      "b": -5541.060608976822,
+      "lo": -6706.255197286437,
+      "hi": -4375.866020667207,
+      "p": 1.1571554298056513e-20
+     },
+     "size_region_n": 591,
+     "plus_remote_pit": {
+      "b": -5671.812448211702,
+      "lo": -6760.407268301766,
+      "hi": -4583.217628121638,
+      "p": 1.7551793002244076e-24
+     },
+     "plus_remote_n": 591
+    }
+   }
+  }
+ },
+ "timing": {
+  "n": {
+   "early": 59,
+   "mid": 121,
+   "late": 29
+  },
+  "models": {
+   "pct_sick": {
+    "n": 209,
+    "mid": {
+     "b": 0.002489516603934225,
+     "lo": -0.004047202325387375,
+     "hi": 0.009026235533255824,
+     "p": 0.45539294228764915
+    },
+    "late": {
+     "b": -0.00354107140693879,
+     "lo": -0.012470169639214258,
+     "hi": 0.005388026825336678,
+     "p": 0.4369960396336353
+    },
+    "per_decade": {
+     "b": 0.0004854634331579052,
+     "lo": -0.0035001763955801175,
+     "hi": 0.004471103261895927,
+     "p": 0.8113151377342068
+    },
+    "median": {
+     "early": 0.0581,
+     "mid": 0.0604,
+     "late": 0.0506
+    }
+   },
+   "pct_inactive_working_age": {
+    "n": 209,
+    "mid": {
+     "b": 0.0074147003654035145,
+     "lo": -0.004026052976249672,
+     "hi": 0.0188554537070567,
+     "p": 0.20399781034642517
+    },
+    "late": {
+     "b": -0.002334282840330694,
+     "lo": -0.02006419757501973,
+     "hi": 0.01539563189435834,
+     "p": 0.796372419561911
+    },
+    "per_decade": {
+     "b": 0.004008034373878445,
+     "lo": -0.004341137421828564,
+     "hi": 0.012357206169585456,
+     "p": 0.34676425468588723
+    },
+    "median": {
+     "early": 0.1292,
+     "mid": 0.1356,
+     "late": 0.124
+    }
+   },
+   "pct_in_work": {
+    "n": 209,
+    "mid": {
+     "b": 0.006966334178939012,
+     "lo": -0.006716742447446881,
+     "hi": 0.020649410805324904,
+     "p": 0.3183483404914971
+    },
+    "late": {
+     "b": -0.006759157120857089,
+     "lo": -0.03430493022054338,
+     "hi": 0.020786615978829203,
+     "p": 0.6305632605861942
+    },
+    "per_decade": {
+     "b": -0.006239440355214973,
+     "lo": -0.016380270015084977,
+     "hi": 0.0039013893046550285,
+     "p": 0.22784647205163966
+    },
+    "median": {
+     "early": 0.5556,
+     "mid": 0.5623,
+     "late": 0.5631
+    }
+   },
+   "pct_routine": {
+    "n": 209,
+    "mid": {
+     "b": -0.0028757289777598784,
+     "lo": -0.020032784933608314,
+     "hi": 0.014281326978088558,
+     "p": 0.7425234067528623
+    },
+    "late": {
+     "b": -0.004005275751641324,
+     "lo": -0.030676206204426,
+     "hi": 0.022665654701143352,
+     "p": 0.7685017038811476
+    },
+    "per_decade": {
+     "b": 0.0037977278437851102,
+     "lo": -0.008731954912676705,
+     "hi": 0.01632741060024693,
+     "p": 0.5524705709249826
+    },
+    "median": {
+     "early": 0.3271,
+     "mid": 0.3242,
+     "late": 0.3389
+    }
+   },
+   "pct_managerial": {
+    "n": 209,
+    "mid": {
+     "b": -0.003186704304827749,
+     "lo": -0.02389767296657358,
+     "hi": 0.017524264356918083,
+     "p": 0.7629791865361422
+    },
+    "late": {
+     "b": 0.004480103011669489,
+     "lo": -0.029977413884999513,
+     "hi": 0.038937619908338494,
+     "p": 0.7988536968363901
+    },
+    "per_decade": {
+     "b": -0.006399183213470203,
+     "lo": -0.021703813843949545,
+     "hi": 0.00890544741700914,
+     "p": 0.41250031407087184
+    },
+    "median": {
+     "early": 0.2748,
+     "mid": 0.2727,
+     "late": 0.2589
+    }
+   },
+   "pct_65plus": {
+    "n": 209,
+    "mid": {
+     "b": -0.010827216056208218,
+     "lo": -0.021763480815294445,
+     "hi": 0.00010904870287800975,
+     "p": 0.05232859398921267
+    },
+    "late": {
+     "b": -0.006192635379137533,
+     "lo": -0.023682825995067585,
+     "hi": 0.01129755523679252,
+     "p": 0.4877126859786459
+    },
+    "per_decade": {
+     "b": -0.002386578826709872,
+     "lo": -0.010103590977513148,
+     "hi": 0.005330433324093405,
+     "p": 0.5444201735125473
+    },
+    "median": {
+     "early": 0.2058,
+     "mid": 0.1975,
+     "late": 0.201
+    }
+   },
+   "pct_no_car": {
+    "n": 209,
+    "mid": {
+     "b": -0.001605041845225564,
+     "lo": -0.01911428726766593,
+     "hi": 0.015904203577214802,
+     "p": 0.8574144229064917
+    },
+    "late": {
+     "b": -0.010976022779613173,
+     "lo": -0.03930325626231042,
+     "hi": 0.01735121070308407,
+     "p": 0.4475941399780192
+    },
+    "per_decade": {
+     "b": 0.0018496858598372916,
+     "lo": -0.01195687414373238,
+     "hi": 0.015656245863406963,
+     "p": 0.7928748115022353
+    },
+    "median": {
+     "early": 0.201,
+     "mid": 0.1976,
+     "late": 0.1879
+    }
+   },
+   "income_fye2023": {
+    "n": 148,
+    "mid": {
+     "b": -578.224698845327,
+     "lo": -2311.572367609712,
+     "hi": 1155.122969919058,
+     "p": 0.5132269574156152
+    },
+    "late": {
+     "b": -1270.6432574086923,
+     "lo": -3685.464212960347,
+     "hi": 1144.1776981429625,
+     "p": 0.3023981839568197
+    },
+    "per_decade": {
+     "b": -1190.8748292866837,
+     "lo": -2144.080448506301,
+     "hi": -237.66921006706687,
+     "p": 0.014339069033940458
+    },
+    "median": {
+     "early": 42983.0,
+     "mid": 43019.0,
+     "late": 43467.5
+    }
+   }
+  },
+  "n_multi": 87,
+  "multi_sick": {
+   "b": 0.0011807608118541149,
+   "lo": -0.004148476121762349,
+   "hi": 0.0065099977454705785,
+   "p": 0.6641031575904206
+  }
+ },
+ "headline": {
+  "sick_pts": 2.0072906600255376,
+  "sick_lo": 1.714381860634563,
+  "sick_hi": 2.3001994594165116,
+  "sick_p": 3.9508761581666744e-41,
+  "sick_older_pts": 0.8880265928299811,
+  "sick_older_p": 0.00019031272792812537,
+  "sick_near_pts": 0.86167380472854,
+  "sick_remote_pts": 2.081841304375371,
+  "inact_pts": 3.1779242616366026,
+  "inact_lo": 2.614574281278821,
+  "inact_hi": 3.7412742419943847,
+  "inact_p": 2.0414965671434387e-28,
+  "inact_older_pts": 1.7934279389758883,
+  "inact_older_p": 0.0003396235653168225,
+  "inact_near_pts": 1.449668005534782,
+  "inact_remote_pts": 3.3005052052239727,
+  "work_pts": 0.18503266896913279,
+  "work_lo": -0.6168038452230722,
+  "work_hi": 0.9868691831613378,
+  "work_p": 0.6510648130777699,
+  "work_older_pts": 0.027223489504990723,
+  "work_older_p": 0.9615308750058545,
+  "work_near_pts": -0.16409777234349668,
+  "work_remote_pts": -0.12693634484397576,
+  "routine_pts": 6.450146883125337,
+  "routine_lo": 5.566608169916415,
+  "routine_hi": 7.3336855963342575,
+  "routine_p": 1.9382823699718833e-46,
+  "routine_older_pts": 4.681857398262265,
+  "routine_older_p": 2.5186687520566774e-09,
+  "routine_near_pts": 2.2376039152808445,
+  "routine_remote_pts": 6.974077334417378,
+  "mgr_pts": -7.982400313352096,
+  "mgr_lo": -9.099315321700914,
+  "mgr_hi": -6.865485305003278,
+  "mgr_p": 1.4020262817485847e-44,
+  "mgr_older_pts": -5.379036790766002,
+  "mgr_older_p": 8.624280962327921e-08,
+  "mgr_near_pts": -2.7451492677546936,
+  "mgr_remote_pts": -8.640869949727264,
+  "age65_pts": -3.726014321141407,
+  "age65_lo": -4.389660469657487,
+  "age65_hi": -3.0623681726253262,
+  "age65_p": 3.6498926443489094e-28,
+  "age65_older_pts": -2.0045990882587073,
+  "age65_older_p": 5.825641016724948e-05,
+  "age65_near_pts": -1.561058799643106,
+  "age65_remote_pts": -3.479760601589918,
+  "nocar_pts": 3.698134757390144,
+  "nocar_lo": 2.8718592722480643,
+  "nocar_hi": 4.524410242532223,
+  "nocar_p": 1.7528962390599888e-18,
+  "nocar_older_pts": 2.1699296737898535,
+  "nocar_older_p": 0.0046253914496625645,
+  "nocar_near_pts": 1.7263963482247655,
+  "nocar_remote_pts": 3.9197792576925106,
+  "income_gbp": -5899.625192935266,
+  "income_lo": -7029.48169124111,
+  "income_hi": -4769.768694629422,
+  "income_p": 1.3950068549268761e-24,
+  "income_older_gbp": -3403.218785957283,
+  "income_near_gbp": -1581.0246996960518,
+  "income_remote_gbp": -6017.887124992795,
+  "income_n": 1582,
+  "income_pct_of_none": -0.10720548768758092,
+  "sick_ratio": 1.687428308227924,
+  "sick_median_ratio": 1.9897260273972601,
+  "sick_per_1000": 20.072906600255376,
+  "income_median_gap": -11949.0,
+  "late_sick_pts": -0.354107140693879,
+  "late_sick_p": 0.4369960396336353,
+  "late_sick_word": "less",
+  "mid_sick_pts": 0.24895166039342248,
+  "mid_sick_p": 0.45539294228764915,
+  "late_income_gbp": -1270.6432574086923,
+  "late_income_p": 0.3023981839568197,
+  "decade_sick_pts": 0.048546343315790524,
+  "decade_sick_p": 0.8113151377342068
+ },
+ "spot": {
+  "Grimethorpe": {
+   "pop": 6006,
+   "group": "pit",
+   "pits": "Grimethorpe (1993)",
+   "last": 1993,
+   "sick": 0.1028,
+   "income": 39207
+  },
+  "Maerdy": {
+   "pop": 3125,
+   "group": "pit",
+   "pits": "Mardy (1986)",
+   "last": 1986,
+   "sick": 0.1352,
+   "income": null
+  },
+  "Knottingley": {
+   "pop": 8410,
+   "group": "pit",
+   "pits": "Kellingley (2015)",
+   "last": 2015,
+   "sick": 0.0684,
+   "income": 40670
+  },
+  "Mansfield": {
+   "pop": 61294,
+   "group": "pit",
+   "pits": "Mansfield (1988); Sherwood (1992)",
+   "last": 1992,
+   "sick": 0.0608,
+   "income": 42495
+  },
+  "Barnsley": {
+   "pop": 71106,
+   "group": "pit",
+   "pits": "North Gawber (1985); Barrow (1985); Dodworth (1987); Redbrook (1987); Royston (1989); Barnsley Main (1991)",
+   "last": 1991,
+   "sick": 0.0692,
+   "income": 39230
+  },
+  "Ashington (Northumberland)": {
+   "pop": 28281,
+   "group": "pit",
+   "pits": "Ashington (1986); Lynemouth (1994)",
+   "last": 1994,
+   "sick": 0.0684,
+   "income": 42291
+  },
+  "Castleford": {
+   "pop": 44293,
+   "group": "pit",
+   "pits": "Fryston (1985); Ledston Luck (1986); Glasshoughton (1986); Wheldale (1987); Allerton Bywater (1992); Prince of Wales (2002)",
+   "last": 2002,
+   "sick": 0.0652,
+   "income": 42220
+  },
+  "Edwinstowe": {
+   "pop": 5323,
+   "group": "pit",
+   "pits": "Ollerton (1994); Thoresby (2015)",
+   "last": 2015,
+   "sick": 0.0386,
+   "income": null
+  },
+  "Goldthorpe": {
+   "pop": 7171,
+   "group": "pit",
+   "pits": "Highgate (1985); Wath (1986); Hickleton Main (1986); Manvers Main (1988); Barnburgh (1989); Goldthorpe (1994)",
+   "last": 1994,
+   "sick": 0.0823,
+   "income": 38340
+  },
+  "Thurnscoe": {
+   "pop": 9517,
+   "group": "pit",
+   "pits": "Highgate (1985); Hickleton Main (1986); Goldthorpe (1994)",
+   "last": 1994,
+   "sick": 0.0921,
+   "income": 35132
+  },
+  "Horden": {
+   "pop": 7204,
+   "group": "pit",
+   "pits": "Horden (1986); Easington (1993)",
+   "last": 1993,
+   "sick": 0.1088,
+   "income": 29696
+  },
+  "Shirebrook": {
+   "pop": 11894,
+   "group": "pit",
+   "pits": "Warsop (1989); Shirebrook (1993)",
+   "last": 1993,
+   "sick": 0.0805,
+   "income": 39078
+  },
+  "Bolsover": {
+   "pop": 9812,
+   "group": "pit",
+   "pits": "Bolsover (1993)",
+   "last": 1993,
+   "sick": 0.0729,
+   "income": 41167
+  },
+  "Hemsworth": {
+   "pop": 9582,
+   "group": "pit",
+   "pits": "Ferrymoor and Riddings (1985); Kinsley (1986); South Kirkby (1988)",
+   "last": 1988,
+   "sick": 0.0872,
+   "income": 36524
+  },
+  "Ferryhill": {
+   "pop": 8408,
+   "group": "older",
+   "pits": "",
+   "last": null,
+   "sick": 0.0772,
+   "income": 31483
+  },
+  "Tredegar": {
+   "pop": 13374,
+   "group": "near",
+   "pits": "",
+   "last": null,
+   "sick": 0.103,
+   "income": 38672
+  },
+  "Treharris": {
+   "pop": 6272,
+   "group": "pit",
+   "pits": "Dowlais Cardiff (1988); Trelewis (1989); Deep Navigation (1991); Taff Merthyr (1992)",
+   "last": 1992,
+   "sick": 0.071,
+   "income": 44005
+  },
+  "Aberfan": {
+   "pop": 2343,
+   "group": "pit",
+   "pits": "Merthyr Vale (1989)",
+   "last": 1989,
+   "sick": 0.1009,
+   "income": 38905
+  },
+  "Stainforth": {
+   "pop": 6065,
+   "group": "pit",
+   "pits": "Hatfield (2015)",
+   "last": 2015,
+   "sick": 0.0812,
+   "income": 38033
+  },
+  "Maltby": {
+   "pop": 14643,
+   "group": "pit",
+   "pits": "Maltby (2013)",
+   "last": 2013,
+   "sick": 0.0545,
+   "income": 43676
+  },
+  "Aylsham": {
+   "pop": 7337,
+   "group": "none",
+   "pits": "",
+   "last": null,
+   "sick": 0.0319,
+   "income": 54898
+  },
+  "Seaham": {
+   "pop": 22270,
+   "group": "pit",
+   "pits": "Dawdon (1991); Murton (1991); Seaham (1992); Vane Tempest (1992)",
+   "last": 1992,
+   "sick": 0.0721,
+   "income": 40082
+  }
+ }
+}

@@ -1,0 +1,194 @@
+country,county,name,town,closed_year,closed_month,note
+England,Cumberland,Haig,Whitehaven,1986,March,
+England,Derbyshire,Arkwright,Arkwright Town,1988,April,
+England,Derbyshire,Blidworth,Blidworth,1989,March,listed under Derbyshire in the table; Blidworth is in Nottinghamshire
+England,Derbyshire,Bolsover,Bolsover,1993,April,
+England,Derbyshire,Creswell,Creswell,1991,September,
+England,Derbyshire,High Moor,Killamarsh,1989,,merged with Kiveton Park; table gives town as Sheffield
+England,Derbyshire,Ireland,Staveley,1986,,
+England,Derbyshire,Markham,Duckmanton,1993,June,
+England,Derbyshire,Renishaw Park,Eckington,1989,March,table gives town as Staveley
+England,Derbyshire,Westthorpe,Killamarsh,1984,February,table gives town as Sheffield
+England,Derbyshire,Whitwell,Whitwell,1986,June,
+England,Durham,Bearpark,Bearpark,1984,April,
+England,Durham,Dawdon,Seaham,1991,July,
+England,Durham,Easington,Easington,1993,May,
+England,Durham,Hawthorn,Murton,1991,November,includes Eppleton and Murton
+England,Durham,Herrington,Fence Houses,1985,December,
+England,Durham,Horden,Horden,1986,February,
+England,Durham,Murton,Murton,1991,November,part of Hawthorn
+England,Durham,Sacriston,Sacriston,1985,November,
+England,Durham,Seaham,Seaham,1992,December,
+England,Durham,Vane Tempest,Seaham,1992,December,
+England,Durham,Wearmouth,Sunderland,1994,May,
+England,Durham,Westoe,South Shields,1993,May,
+England,Kent,Betteshanger,Betteshanger,1989,August,
+England,Kent,Snowdown,Nonington,1987,October,
+England,Kent,Tilmanstone,Eythorne,1986,October,
+England,Lancashire,Agecroft,Pendlebury,1990,July,
+England,Lancashire,Bickershaw,Leigh,1992,March,
+England,Lancashire,Bold,St Helens,1985,November,
+England,Lancashire,Cronton,Cronton,1984,March,table gives town as Prescot
+England,Lancashire,Parkside,Newton-le-Willows,1993,June,
+England,Lancashire,Parsonage,Leigh,1992,March,
+England,Lancashire,Sutton Manor,St Helens,1991,May,
+England,Leicestershire,Asfordby,Asfordby,1997,August,closed by RJB Mining
+England,Leicestershire,Bagworth,Bagworth,1991,February,
+England,Leicestershire,Cadley Hill,Swadlincote,1988,March,
+England,Leicestershire,Desford,Bagworth,1984,January,
+England,Leicestershire,Donisthorpe,Donisthorpe,1990,April,
+England,Leicestershire,Ellistown,Ellistown,1991,February,
+England,Leicestershire,Measham,Measham,1985,,
+England,Leicestershire,Rawdon,Moira,1986,,
+England,Leicestershire,Snibston,Coalville,1984,January,
+England,Leicestershire,South Leicester,Coalville,1986,,
+England,Leicestershire,Whitwick,Coalville,1986,July,
+England,Northumberland,Ashington,Ashington,1986,October,
+England,Northumberland,Bates,Blyth,1986,February,
+England,Northumberland,Brenkley,Seaton Burn,1985,October,
+England,Northumberland,Ellington,Ellington,2005,January,table gives town as Morpeth
+England,Northumberland,Lynemouth,Lynemouth,1994,October,table gives town as Morpeth
+England,Northumberland,Whittle,Newton on the Moor,1987,January,
+England,Nottinghamshire,Annesley,Annesley,1994,February,merged with Bentinck in 1988
+England,Nottinghamshire,Babbington,Cinderhill,1986,January,
+England,Nottinghamshire,Bentinck,Kirkby-in-Ashfield,2000,January,merged with Annesley
+England,Nottinghamshire,Bevercotes,Bevercotes,1993,April,table gives town as Retford
+England,Nottinghamshire,Bilsthorpe,Bilsthorpe,1997,March,table gives town as Newark
+England,Nottinghamshire,Calverton,Calverton,1999,April,
+England,Nottinghamshire,Clipstone,Clipstone,2003,June,table gives town as Mansfield
+England,Nottinghamshire,Cotgrave,Cotgrave,1992,December,
+England,Nottinghamshire,Gedling,Gedling,1991,November,
+England,Nottinghamshire,Harworth,Bircotes,2006,August,
+England,Nottinghamshire,Hucknall,Hucknall,1986,January,
+England,Nottinghamshire,Linby,Linby,1988,March,
+England,Nottinghamshire,Mansfield,Mansfield,1988,March,
+England,Nottinghamshire,Moorgreen,Newthorpe,1985,July,
+England,Nottinghamshire,Newstead,Newstead,1987,March,
+England,Nottinghamshire,Ollerton,Ollerton,1994,February,table gives town as Newark
+England,Nottinghamshire,Pleasley,Pleasley,1984,,table gives town as Mansfield
+England,Nottinghamshire,Pye Hill,Jacksdale,1985,August,
+England,Nottinghamshire,Rufford,Rainworth,1993,November,table gives town as Mansfield
+England,Nottinghamshire,Sherwood,Mansfield Woodhouse,1992,January,table gives town as Mansfield
+England,Nottinghamshire,Shirebrook,Shirebrook,1993,April,table gives town as Mansfield
+England,Nottinghamshire,Silverhill,Sutton-in-Ashfield,1992,December,
+England,Nottinghamshire,Sutton,Sutton-in-Ashfield,1989,August,
+England,Nottinghamshire,Thoresby,Edwinstowe,2015,July,table gives town as Mansfield
+England,Nottinghamshire,Warsop,Market Warsop,1989,August,table gives town as Mansfield
+England,Nottinghamshire,Welbeck,Meden Vale,2010,May,table gives town as Mansfield
+England,Staffordshire,Birch Coppice,Dordon,1986,November,table gives town as Tamworth
+England,Staffordshire,Daw Mill,New Arley,2013,March,table gives town as Tamworth
+England,Staffordshire,Florence,Longton,1994,April,
+England,Staffordshire,Hem Heath,Trentham,1992,June,
+England,Staffordshire,Holditch,Chesterton,1989,August,
+England,Staffordshire,Lea Hall,Rugeley,1990,December,
+England,Staffordshire,Littleton,Huntington,1993,December,
+England,Staffordshire,Silverdale,Silverdale,1993,December,table gives town as Newcastle
+England,Staffordshire,Trentham,Trentham,1992,October,
+England,Staffordshire,Wolstanton,Wolstanton,1985,October,
+England,Warwickshire,Baddesley,Baddesley Ensor,1989,February,table gives town as Atherstone
+England,Warwickshire,Coventry,Keresley,1991,August,
+England,Yorkshire,Ackton Hall,Featherstone,1985,July,
+England,Yorkshire,Allerton Bywater,Allerton Bywater,1992,March,
+England,Yorkshire,Askern,Askern,1991,December,
+England,Yorkshire,Barnburgh,Barnburgh,1989,May,
+England,Yorkshire,Barrow,Worsbrough Bridge,1985,May,
+England,Yorkshire,Bentley,Bentley,1993,December,
+England,Yorkshire,Brodsworth,Woodlands,1990,September,
+England,Yorkshire,Brookhouse,Beighton,1985,October,table gives town as Sheffield
+England,Yorkshire,Bullcliffe Wood,Bretton,1985,August,
+England,Yorkshire,Cadeby,Denaby Main,1986,November,
+England,Yorkshire,Caphouse,Overton,1985,October,
+England,Yorkshire,Cortonwood,Brampton,1985,October,table gives town as Wombwell
+England,Yorkshire,Darfield Main,Wombwell,1989,July,merged with Houghton Main in November 1985
+England,Yorkshire,Dearne Valley,Little Houghton,1991,March,
+England,Yorkshire,Denby Grange,Netherton,1991,August,
+England,Yorkshire,Dinnington,Dinnington,1991,September,
+England,Yorkshire,Dodworth,Dodworth,1985,June,merged with Redbrook
+England,Yorkshire,Emley Moor,Emley,1985,December,
+England,Yorkshire,Ferrymoor Riddings,South Kirkby,1988,March,
+England,Yorkshire,Frickley-South Elmsall,South Elmsall,1993,November,
+England,Yorkshire,Fryston,Airedale,1985,December,
+England,Yorkshire,Gascoigne Wood Drift,Sherburn in Elmet,2004,October,table gives town as Selby
+England,Yorkshire,Glasshoughton,Castleford,1986,March,
+England,Yorkshire,Goldthorpe-Highgate,Goldthorpe,1994,February,
+England,Yorkshire,Grimethorpe,Grimethorpe,1992,October,
+England,Yorkshire,Hatfield,Stainforth,2015,June,
+England,Yorkshire,Hickleton,Thurnscoe,1986,January,merged with Goldthorpe
+England,Yorkshire,Houghton Main,Little Houghton,1992,December,
+England,Yorkshire,Kellingley,Knottingley,2015,December,
+England,Yorkshire,Kilnhurst,Kilnhurst,1986,January,merged with Manvers
+England,Yorkshire,Kinsley Drift,Kinsley,1986,July,
+England,Yorkshire,Kiveton Park,Kiveton Park,1994,October,table gives town as Sheffield
+England,Yorkshire,Ledston Luck,Kippax,1986,October,
+England,Yorkshire,Maltby,Maltby,2012,December,table gives town as Rotherham
+England,Yorkshire,Manton,Worksop,1994,February,
+England,Yorkshire,Manvers,Wath upon Dearne,1988,March,
+England,Yorkshire,Markham Main,Armthorpe,1992,October,
+England,Yorkshire,North Gawber,Mapplewell,1985,,merged with Woolley
+England,Yorkshire,North Selby,Escrick,1997,July,table gives town as Selby
+England,Yorkshire,Nostell,Crofton,1987,October,
+England,Yorkshire,Park Mill,Clayton West,1988,December,merged with Denby Grange
+England,Yorkshire,Prince of Wales,Pontefract,2002,August,
+England,Yorkshire,Redbrook,Barugh,1987,December,part of Dodworth
+England,Yorkshire,Riccall,Riccall,2004,October,merged with Whitemoor; table gives town as Selby
+England,Yorkshire,Rossington,Rossington,2006,March,
+England,Yorkshire,Royston,Royston,1989,September,
+England,Yorkshire,Savile,Methley,1985,August,
+England,Yorkshire,Sharlston New,Sharlston,1993,July,
+England,Yorkshire,Shireoaks,Shireoaks,1990,June,table gives town as Worksop
+England,Yorkshire,Silverwood,Thrybergh,1994,December,merged with Maltby
+England,Yorkshire,South Kirkby,South Kirkby,1988,March,
+England,Yorkshire,Stillingfleet,Stillingfleet,2004,July,merged with North Selby; table gives town as Selby
+England,Yorkshire,Thurcroft,Thurcroft,1991,December,table gives town as Rotherham
+England,Yorkshire,Treeton,Treeton,1990,December,table gives town as Rotherham
+England,Yorkshire,Wath,Wath upon Dearne,1988,March,merged with Manvers
+England,Yorkshire,Wheldale,Castleford,1987,October,
+England,Yorkshire,Whitemoor,Cliffe,1998,May,merged with Riccall; table gives town as Selby
+England,Yorkshire,Wistow,Wistow,2004,May,table gives town as Selby
+England,Yorkshire,Woolley,Darton,1987,December,
+England,Yorkshire,Yorkshire Main,New Edlington,1985,October,
+Wales,Carmarthenshire,Betws,Ammanford,1993,January,
+Wales,Carmarthenshire,Carway Fawr Drift,Pontyates,1992,November,
+Wales,Carmarthenshire,Cwmgwili,Cross Hands,1996,November,a comment in the table says it may have closed in 1994
+Wales,Flintshire,Bersham,Rhostyllen,1986,December,table gives town as Wrexham
+Wales,Flintshire,Point of Ayr,Ffynnongroyw,1996,August,
+Wales,Glamorgan,Abernant,Pontardawe,1988,February,
+Wales,Glamorgan,Aberpergwm,Glyn-neath,1985,October,
+Wales,Glamorgan,Blaenant,Crynant,1990,May,table gives town as Neath
+Wales,Glamorgan,Cwm/Coedely,Beddau,1986,November,table gives town as Llantwit Fardre
+Wales,Glamorgan,Deep Navigation,Treharris,1991,March,
+Wales,Glamorgan,Dowlais Cardiff,Abercynon,1988,February,
+Wales,Glamorgan,Garw-Ffaldau,Pontycymer,1985,December,table gives town as Maesteg
+Wales,Glamorgan,Lady Windsor-Abercynon,Ynysybwl,1988,February,
+Wales,Glamorgan,Mardy,Maerdy,1986,June,
+Wales,Glamorgan,Merthyr Vale,Aberfan,1989,August,
+Wales,Glamorgan,Nantgarw-Windsor,Nantgarw,1986,November,
+Wales,Glamorgan,Penallta,Ystrad Mynach,1991,November,table gives town as Hengoed
+Wales,Glamorgan,Penrikyber,Penrhiwceiber,1985,October,
+Wales,Glamorgan,Pentreclwydau South,Glyn-neath,1988,July,
+Wales,Glamorgan,St John's,Maesteg,1985,November,
+Wales,Glamorgan,Taff Merthyr,Trelewis,1992,October,table gives town as Treharris
+Wales,Glamorgan,Tower,Hirwaun,2008,January,
+Wales,Glamorgan,Treforgan,Crynant,1985,September,
+Wales,Glamorgan,Trelewis,Trelewis,1989,August,table gives town as Treharris
+Wales,Glamorgan,Wyndham-Western,Nant-y-moel,1984,January,table gives town as Ogmore Vale
+Wales,Monmouthshire,Abertillery,Abertillery,1985,October,
+Wales,Monmouthshire,Bedwas,Bedwas,1985,August,
+Wales,Monmouthshire,Blaenserchan,Abersychan,1985,August,
+Wales,Monmouthshire,Celynen North,Newbridge,1985,March,
+Wales,Monmouthshire,Celynen South,Abercarn,1985,November,
+Wales,Monmouthshire,Cynheidre-Pentremawr,Five Roads,1989,January,listed under Monmouthshire in the extract; Cynheidre is in Carmarthenshire near Llanelli
+Wales,Monmouthshire,Marine,Cwm,1989,March,
+Wales,Monmouthshire,Markham,Markham,1985,September,merged with Oakdale in 1979; table gives town as Blackwood
+Wales,Monmouthshire,Oakdale,Oakdale,1989,August,
+Wales,Monmouthshire,Six Bells,Six Bells,1987,August,
+Scotland,Ayrshire,Barony,Auchinleck,1989,February,
+Scotland,Ayrshire,Killoch,Ochiltree,1987,March,
+Scotland,Fife,Comrie,Saline,1986,,
+Scotland,Fife,Frances,Dysart,1995,January,
+Scotland,Fife,Longannet Complex,Kincardine,2002,March,included Castlehill and Solsgirth
+Scotland,Fife,Seafield,Kirkcaldy,1988,January,
+Scotland,Midlothian,Bilston Glen,Loanhead,1989,May,
+Scotland,Midlothian,Monktonhall,Millerhill,1998,April,
+Scotland,Stirlingshire,Polmaise 3 and 4,Fallin,1987,June,table gives town as Stirling
+Scotland,West Lothian,Polkemmet,Whitburn,1986,June,

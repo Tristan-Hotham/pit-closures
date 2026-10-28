@@ -1,0 +1,17 @@
+{
+ "n_pits": 196,
+ "n_york_wiki": 58,
+ "n_nmrs_rows": 193,
+ "year_agreement": {
+  "exact": 62,
+  "more": 8,
+  "1yr": 7
+ },
+ "placing": {
+  "osm_colliery": 37,
+  "village": 95,
+  "wikidata": 64
+ },
+ "n_osm_named": 2010,
+ "n_wd_mines": 1296
+}
