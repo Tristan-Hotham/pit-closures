@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Did the Pits Closing Still Show?</title>
+<meta name="description" content="Every deep coal mine working in Britain in 1984, when each closed, and how the towns around them compare in the 2021 Census with similar towns that never had a pit. NMRS colliery tables, Wikipedia, OpenStreetMap, Wikidata, Census 2021 and ONS income estimates.">
+<meta property="og:title" content="Did the pits closing still show?">
+<meta property="og:description" content="{{pits.n|int}} deep mines were working at the start of 1984; {{pits.n_by_1994|int}} had closed by 1994. In 2021 the {{towns.groups_sample.pit|int}} pit towns of England and Wales had {{headline.sick_pts|ppabs}} points more adults long-term sick than similar towns without a pit.">
+<meta property="og:image" content="https://tristan-hotham.github.io/pit-closures/header.png">
+<meta property="og:url" content="https://tristan-hotham.github.io/pit-closures/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Ash and slate. Banner red = pits and pit towns. Coal = pits still working. Amber = older mining towns. Slate = comparison towns. */
+:root{
+  --bg:#EEEEEA; --panel:#E2E2DC; --fg:#1B1C1E; --muted:#5E6064; --rule:#D0D0C8; --card:#F8F8F5; --border:#B9BAB3;
+  --hot:#B3261E; --coal:#25272B; --older:#B57A1C; --near:#8E99A3; --none:#4F6D86; --dim:#A8A9A3; --now:#E0442F;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151618; --panel:#1E2023; --fg:#ECECE8; --muted:#A3A5A8; --rule:#34363A; --card:#1B1D20; --border:#45484D;
+  --hot:#E8584C; --coal:#E2E3E0; --older:#E0A64A; --near:#7D8791; --none:#7FA3C2; --dim:#5D6066; --now:#FF8A6B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151618; --panel:#1E2023; --fg:#ECECE8; --muted:#A3A5A8; --rule:#34363A; --card:#1B1D20; --border:#45484D;
+  --hot:#E8584C; --coal:#E2E3E0; --older:#E0A64A; --near:#7D8791; --none:#7FA3C2; --dim:#5D6066; --now:#FF8A6B; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--hot);color:#fff;padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(46px,11vw,96px)/.88 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--hot)}
+.mark{width:clamp(90px,20vw,170px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:46ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+ul{padding-left:22px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hot)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.slider{display:flex;gap:10px;align-items:center;flex:1 1 260px;min-width:0}
+.slider input{flex:1;min-width:0;accent-color:var(--hot)}
+.yearbig{font:900 34px/1 var(--display);min-width:3.2ch;color:var(--hot)}
+.count{font:400 12px/1.3 var(--mono);color:var(--muted);flex:0 1 auto}
+@media (max-width:600px){.slider{flex-wrap:wrap}.slider input{flex:1 1 150px}.count{flex-basis:100%}}
+.search{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.search input{flex:1 1 240px;min-width:0;font:400 16px/1.2 var(--body);padding:10px 12px;border:1px solid var(--border);border-radius:3px;background:var(--card);color:var(--fg)}
+.answer{background:var(--card);border:1px solid var(--border);border-left:5px solid var(--hot);padding:12px 14px;margin:0 0 14px;font-size:16px;display:none}
+.answer b.t{font:700 22px/1.15 var(--display);display:block;margin-bottom:4px}
+.answer small{display:block;font:400 12.5px/1.45 var(--mono);color:var(--muted);margin-top:6px}
+#lmap{height:640px;border:1px solid var(--border);background:var(--panel);border-radius:2px}
+@media (max-width:600px){#lmap{height:500px}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--panel)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:12px 14px;font:400 12.5px/1.45 var(--mono);min-width:220px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.pop b.t{font:600 17px/1.2 var(--display);display:block;margin-bottom:2px}
+.pop .c{color:var(--muted);margin-bottom:6px}
+.pop dl{display:grid;grid-template-columns:auto 1fr;gap:1px 10px;margin:4px 0 6px}
+.pop dt{color:var(--muted)}.pop dd{margin:0}
+.pop .note{font-size:11.5px;color:var(--muted);margin:4px 0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{color:var(--muted);display:block}
+table.t .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.k{border-left-color:var(--none)}.card.o{border-left-color:var(--older)}
+.card b{font:600 19px/1.2 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 26px/1.05 var(--display);margin:8px 0 2px}
+.card .big span{color:var(--muted);font:400 12px/1.35 var(--mono);display:block;margin-top:3px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>History × data</span><span>Britain, 1984 to 2021</span></div>
+<header class="hero">
+  <h1>Did the pits closing <em>still show?</em></h1>
+  <svg class="mark" viewBox="0 0 200 150" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">At the start of 1984 Britain still had a deep coal industry. Within ten years almost all of it had gone. I mapped every deep mine that was working that year, found the towns that grew up around them, and compared those towns in the 2021 Census with towns of the same size, in the same regions, that never had a pit.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Northern Mine Research Society colliery tables, Wikipedia, OpenStreetMap, Wikidata, ONS Census 2021 and income estimates</div>
+
+<div class="stats">
+  <div><b>{{pits.n|int}}</b><span>deep mines in my list working at the start of 1984</span></div>
+  <div><b class="h">{{pits.n_by_1994|int}}</b><span>of them closed by the end of 1994; the last in 2015</span></div>
+  <div><b>{{towns.groups_sample.pit|int}}</b><span>pit towns of 2,000 to 100,000 people in England and Wales</span></div>
+  <div><b class="h">+{{headline.sick_pts|ppabs}}</b><span>points more adults long-term sick in 2021 than in similar towns without a pit</span></div>
+</div>
+
+<p class="lede">The great miners' strike began on {{context.strike_start|raw}}, with a walkout at Cortonwood Colliery in South Yorkshire, and ended a year later, on {{context.strike_end|raw}}. Wikipedia's article on the strike says {{context.pits_1984_wiki|int}} pits were still working in 1984. The last deep mine in Britain, Kellingley in North Yorkshire, closed on {{context.kellingley_close|raw}}.</p>
+<p>The strike is still argued over, and this page does not take sides on it. My question is a narrower one, and it can be put to data. Forty years on, do the places that lived by the pits still look different from other places? And if they do, does it matter whether their pit closed in the first wave after the strike or held on into this century?</p>
+<p>The answer is a clear yes to the first question and, more surprisingly, mostly no to the second. But there is an important catch: the coalfields were different from other places long before 1984, and my data cannot see that far back.</p>
+
+<h2><span class="n">01 · The pits</span>Every deep mine, year by year</h2>
+<p>There is no single open list of the pits working in 1984, so I built one. For Yorkshire, Wikipedia's List of collieries in Yorkshire (1984 to 2015) gives every pit and its closure year. For the rest of England, Wales and Scotland I used the Northern Mine Research Society's tables of the National Coal Board's collieries, keeping every colliery that closed in 1984 or later, and checked the years against Wikipedia's lists for Derbyshire and the United Kingdom. Where both give a year, they agree exactly for {{pits.share_year_exact|pct}} of {{pits.n_year_checked|int}} pits and within a year for {{pits.share_year_within1|pct}}; where they differ I use Wikipedia's year, since anyone can check it.</p>
+<p>That gives {{pits.n|int}} colliery units: {{pits.by_country.England|int}} in England, {{pits.by_country.Wales|int}} in Wales and {{pits.by_country.Scotland|int}} in Scotland. It runs a little above the {{context.pits_1984_wiki|int}} usually quoted, because some combined mines appear under more than one name. I placed {{pits.placing.osm_colliery|int}} pits at a colliery mapped in OpenStreetMap, {{pits.placing.wikidata|int}} at their Wikidata entry and the other {{pits.placing.village|int}} at the village or town the pit was named for.</p>
+<p>Search for a town, or press play to watch the coalfields go dark. Pits are black while they work and turn red in the year they close. Switch to "Towns today" to see which towns had a pit and how they look now.</p>
+<div class="figure bleed">
+  <div class="search">
+    <input id="q" list="townlist" placeholder="Find your town (England, Wales or Scotland)" aria-label="Find your town" autocomplete="off">
+    <datalist id="townlist"></datalist>
+    <button class="btn" id="go">Find</button>
+  </div>
+  <div class="answer" id="answer" aria-live="polite"></div>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Map layer">
+      <button class="btn" data-mode="pits" aria-pressed="true">Pits by year</button>
+      <button class="btn" data-mode="towns" aria-pressed="false">Towns today</button>
+    </div>
+    <button class="btn" id="play" aria-pressed="false">▶ Play</button>
+    <div class="slider"><span class="yearbig" id="yr">1984</span><input type="range" id="year" min="1984" max="2015" step="1" value="1984" aria-label="Show the pits still working in this year"><span class="count" id="cnt"></span></div>
+  </div>
+  <div id="lmap" role="region" aria-label="Map of the deep coal mines working in Britain in 1984, coloured by whether they had closed by the chosen year, with towns by their mining history"></div>
+  <div class="legend" id="legend"></div>
+  <div class="src">Pits: NMRS colliery tables and Wikipedia lists, placed by OpenStreetMap (ODbL), Wikidata (CC0) or OS Open Names. Towns: ONS Built-up Areas 2022. Click the map to let the scroll wheel zoom it.</div>
+</div>
+
+<div class="figure">
+  <div class="fig-h">Deep mines closed each year, 1984 to 2015</div>
+  <div class="fig-sub">Pits in my list by year of final closure.</div>
+  <div class="chart" id="years"></div>
+  <div class="src">{{pits.n_pre_strike|int}} pits closed in January or February 1984, before the strike began.</div>
+</div>
+<p>The closures came fast. The worst single year was {{pits.peak_year|raw}}, the year the strike ended, when {{pits.peak_n|int}} of the pits closed; {{pits.n_1985_86|int}} went in 1985 and 1986 together. A second wave followed from 1988 to 1994, including the programme announced in October 1992, which brought {{pits.n_1992_94|int}} closures in 1992 to 1994. By the end of 1994, when the industry was privatised, {{pits.n_by_1994|int}} of the {{pits.n|int}} pits had gone ({{pits.share_by_1994|pct}}). The remaining {{pits.n_1995_2015|int}} closed one by one over the next twenty years, the last three in 2015: Hatfield, Thoresby and Kellingley.</p>
+
+<div class="figure">
+  <div class="fig-h">When each coalfield's pits closed</div>
+  <div class="fig-sub">One dot per pit, by year of closure. Areas as named in the source tables; Yorkshire includes the Selby complex.</div>
+  <div class="chart" id="strip"></div>
+</div>
+<p>Wales lost its pits a little sooner than England: {{pits.by_country_detail.Wales.share_by_1987|pct}} of the Welsh pits in my list had closed by the end of 1987, against {{pits.by_country_detail.England.share_by_1987|pct}} of the English ones. Nottinghamshire, where most miners kept working through the strike, kept its pits a little longer than most, but not for long: its median pit closed in {{pits.by_area_detail.Nottinghamshire.median_year|yr}}, against {{pits.by_area_detail.Yorkshire.median_year|yr}} in Yorkshire.</p>
+
+<h2><span class="n">02 · The towns</span>Which towns were pit towns?</h2>
+<p>To turn pits into towns I used the ONS Built-up Areas of 2022, which cover every town and village in Great Britain. A pit belongs to a town if it lies within 3 km of the town's centre, or within 2 km of its edge for larger towns (I treat each town as a circle with the same area). Pits often stood just outside the village they fed, so the rule is generous. Then I sorted every town into four groups:</p>
+<ul>
+  <li><b>Pit towns</b>: at least one of the 1984 pits within reach.</li>
+  <li><b>Coalfield neighbours</b>: no pit within reach, but one within 10 km of the town's edge. Many of their people will have worked at the pits too, so I keep them apart.</li>
+  <li><b>Older mining towns</b>: no 1984 pit near, but a colliery named in OpenStreetMap or Wikidata within reach. Most of these pits closed long before 1984.</li>
+  <li><b>Comparison towns</b>: none of the above.</li>
+</ul>
+<p>For the comparisons I keep to the {{towns.n_sample|int}} built-up areas in England and Wales with 2,000 to 100,000 people in 2021, because Census 2021 figures for Scotland are not in my data. Among them are {{towns.groups_sample.pit|int}} pit towns, home to {{towns.pop_pit_sample|int}} people, {{towns.groups_sample.near|int}} coalfield neighbours, {{towns.groups_sample.older|int}} older mining towns and {{towns.groups_sample.none|int}} comparison towns.</p>
+<div class="figure">
+  <div class="fig-h">Share of towns that were pit towns, by region</div>
+  <div class="fig-sub">Built-up areas of 2,000 to 100,000 people in England and Wales. Number of pit towns in brackets.</div>
+  <div class="chart" id="regions"></div>
+</div>
+<p>In Yorkshire and the Humber, {{towns.by_region.0.share_pit|pct}} of all the towns in this size range were pit towns; in the East Midlands {{towns.by_region.1.share_pit|pct}}, in Wales {{towns.by_region.2.share_pit|pct}} and in the North East {{towns.by_region.3.share_pit|pct}}. Because the comparisons are made within each region, a Yorkshire pit town is always set against Yorkshire towns without a pit, not against the Home Counties.</p>
+<h3>The biggest pit towns</h3>
+<div class="figure">
+  <div class="tablewrap"><table class="t" id="bigtab"></table></div>
+  <div class="src">Built-up areas of 2,000 to 100,000 people in England and Wales with a 1984 pit within reach, by 2021 population. Long-term sick: share of residents aged 16 or over, Census 2021.</div>
+</div>
+
+<h2><span class="n">03 · Today</span>How do the towns compare?</h2>
+<p>For each town I took eight figures from Census 2021 and the ONS income estimates: the share of adults long-term sick or disabled; the share economically inactive for reasons other than retirement or study; the share in work; the shares in routine or semi-routine jobs and in managerial or professional jobs; the share of residents aged 65 or over; the share of households without a car or van; and mean household income (for the financial year ending 2023, available for {{headline.income_n|int}} of the towns).</p>
+<div class="cards">
+  <div class="card"><b>Pit towns</b><div class="big">{{outcomes.median.pit.n|int}} <span>towns, median {{towns.medians.pit.median_pop|int}} people</span></div><div class="big">{{outcomes.median.pit.pct_sick|pct1}} <span>median share of adults long-term sick</span></div><div class="big">{{outcomes.median.pit.income_fye2023|gbp}} <span>median household income</span></div></div>
+  <div class="card o"><b>Older mining towns</b><div class="big">{{outcomes.median.older.n|int}} <span>towns, median {{towns.medians.older.median_pop|int}} people</span></div><div class="big">{{outcomes.median.older.pct_sick|pct1}} <span>median share of adults long-term sick</span></div><div class="big">{{outcomes.median.older.income_fye2023|gbp}} <span>median household income</span></div></div>
+  <div class="card k"><b>Comparison towns</b><div class="big">{{outcomes.median.none.n|int}} <span>towns, median {{towns.medians.none.median_pop|int}} people</span></div><div class="big">{{outcomes.median.none.pct_sick|pct1}} <span>median share of adults long-term sick</span></div><div class="big">{{outcomes.median.none.income_fye2023|gbp}} <span>median household income</span></div></div>
+</div>
+<p>The raw medians are stark: {{headline.sick_median_ratio|f1}} times the share of adults long-term sick, and {{headline.income_median_gap|gbpabs}} less median household income. Raw medians mix in size and region, so I compared each group with comparison towns of similar size in the same region, using a regression with region, size and size squared. The chart shows the gaps and their 95% intervals.</p>
+<div class="figure">
+  <div class="fig-h">Pit towns, older mining towns and coalfield neighbours against similar comparison towns</div>
+  <div class="fig-sub">Difference from comparison towns of the same size and region. Dots: estimate; lines: 95% interval. Percentage points, except income (£ a year).</div>
+  <div class="chart" id="gaps"></div>
+  <div class="src">Least-squares regressions with robust standard errors, {{outcomes.models.pct_sick.size_region_n|int}} towns ({{headline.income_n|int}} for income). Grey band: no difference.</div>
+</div>
+<p>Size for size, and region for region, the pit towns have {{headline.sick_pts|ppabs}} percentage points more adults who are long-term sick or disabled (95% interval {{headline.sick_lo|ppabs}} to {{headline.sick_hi|ppabs}}). Against a comparison town median of {{outcomes.median.none.pct_sick|pct1}}, that is about {{headline.sick_ratio|f1}} times as many. They have {{headline.inact_pts|ppabs}} points more adults out of work for reasons other than retirement or study, {{headline.routine_pts|ppabs}} points more in routine or semi-routine jobs, {{headline.mgr_pts|ppabs}} points fewer in managerial or professional jobs, {{headline.nocar_pts|ppabs}} points more households without a car, and about {{headline.income_gbp|gbpabs}} a year less household income ({{headline.income_pct_of_none|pctabs}} of the comparison towns' median).</p>
+<p class="pull">Forty years on, the pit towns are poorer and sicker than similar towns that never had a pit. The gap is not small, and it holds in England and in Wales alike.</p>
+<p>Two results are less obvious. The pit towns are younger, with {{headline.age65_pts|ppabs}} points fewer residents aged 65 or over. And their share of adults in work is no different from the comparison towns ({{headline.work_pts|pp}} points, well within chance). That is because fewer of their adults are retired: among those of working age, more are out of work through sickness or disability. Allowing for the share aged 65 or over leaves the sickness gap at {{checks.age_control.models.pct_sick.size_region_pit.b|ptsabs}} points.</p>
+<p>The older mining towns, whose pits mostly closed long before 1984, show the same pattern at roughly half to two thirds the size: {{headline.sick_older_pts|ppabs}} points more long-term sick, {{headline.routine_older_pts|ppabs}} points more routine jobs and {{headline.income_older_gbp|gbpabs}} less income. The coalfield neighbours sit closer again to the comparison towns ({{headline.sick_near_pts|ppabs}} points more long-term sick, {{headline.income_near_gbp|gbpabs}} less income). The nearer a town was to the 1984 pits, the bigger the gap.</p>
+<h3>The pit towns with the most long-term sickness</h3>
+<div class="figure">
+  <div class="tablewrap"><table class="t" id="sicktab"></table></div>
+  <div class="src">Pit towns of 5,000 to 100,000 people, by share of residents aged 16 or over who are long-term sick or disabled (Census 2021). The comparison town median is {{outcomes.median.none.pct_sick|pct1}}.</div>
+</div>
+
+<h2><span class="n">04 · Timing</span>Did it matter when the pit closed?</h2>
+<p>If the closures themselves left the scar, you might expect towns whose pit shut in 1985 to look worse than towns whose pit worked on into the 2000s. I split the pit towns by the year their last pit closed: {{timing.n.early|int}} in 1984 to 1987, {{timing.n.mid|int}} in 1988 to 1994 and {{timing.n.late|int}} in 1995 to 2015.</p>
+<div class="figure">
+  <div class="fig-h">Pit towns by when their last pit closed</div>
+  <div class="fig-sub">Median share of adults long-term sick or disabled, and inactive for other reasons than retirement or study, 2021. Comparison towns for reference.</div>
+  <div class="chart" id="waves"></div>
+</div>
+<p>There is no clear difference. Compared with towns of the same size and region whose last pit closed in 1984 to 1987, those whose pit lasted until 1995 or later have {{headline.late_sick_pts|ppabs}} points {{headline.late_sick_word|raw}} long-term sickness, well within chance, and no clear difference in income either. Each extra decade the pit stayed open goes with a difference in sickness of {{headline.decade_sick_pts|f2}} points, which is negligible. The towns that lost their pit in the 2010s look much like those that lost it in the 1980s.</p>
+<p>I can think of two readings, and the data cannot choose between them. One is that the gap is about the coalfields as places, not about the date of a closure: the industrial structure, the health legacy of mining work, the kind of jobs that came after. The other is that by the time the late survivors closed they employed far fewer local men than in 1984, so their towns had already been through most of the change. Either way, the date on the closure notice is not what separates these towns now.</p>
+
+<h2><span class="n">05 · What this cannot show</span>The coalfields before 1984, and other limits</h2>
+<p><b>Association, not cause.</b> The coalfields were not like other places before the closures. Mining towns were built for the pits, their work was manual, and mining itself left men with damaged lungs and backs. I have no town figures from 1981 or 1991 in my data, so I cannot compare before and after, and some of today's gap was surely there in 1984. The older mining towns, whose pits closed decades earlier and which show a similar but smaller gap, fit that view: the coalfields have a long shadow, and 1984 to 1994 is only its latest part.</p>
+<p><b>Which towns count.</b> My rule, a pit within 3 km of the centre or 2 km of the edge, is rough. With a tighter rule (2 km, or 1 km beyond the edge) {{checks.tight.n_pit|int}} towns count as pit towns and the sickness gap is {{checks.tight.models.pct_sick.size_region_pit.b|ptsabs}} points; with a looser one (5 km, or 3 km beyond the edge) {{checks.wide.n_pit|int}} towns and {{checks.wide.models.pct_sick.size_region_pit.b|ptsabs}} points. Keeping only towns of 5,000 or more gives {{checks.over5k.models.pct_sick.size_region_pit.b|ptsabs}} points, only towns at least 15 km from a city of 100,000 gives {{checks.away_from_cities.models.pct_sick.size_region_pit.b|ptsabs}}, and only the coalfield regions gives {{checks.coal_regions.models.pct_sick.size_region_pit.b|ptsabs}}. In England alone the gap is {{checks.england.models.pct_sick.size_region_pit.b|ptsabs}} points and in Wales {{checks.wales.models.pct_sick.size_region_pit.b|ptsabs}} points.</p>
+<p><b>The comparison towns are not untouched.</b> Many lost steelworks, mills or factories in the same years. My comparison asks how pit towns differ from other towns of their size and region, not from places that escaped deindustrialisation.</p>
+<p><b>The pit list.</b> The NMRS figures came to me as an extract of its online tables, which I checked against Wikipedia where I could; a few years may be out by one, and closure dates for merged mines are hard to pin down. {{pits.placing.village|int}} pits are placed at their village rather than the pit head, which can be a kilometre or two out.</p>
+<p><b>Census 2021.</b> The census was taken in March 2021, during the pandemic, which may have affected work and health answers everywhere. Income figures are modelled estimates for small areas, not counts. Scottish towns are mapped but not compared.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Pits.</b> Every colliery in the Northern Mine Research Society's tables of National Coal Board collieries in England, Wales and Scotland that closed in 1984 or later, with Wikipedia's List of collieries in Yorkshire (1984 to 2015) for Yorkshire ({{pits.n_york_wiki|int}} rows) and its Derbyshire and United Kingdom lists as checks; Wikipedia's year is used where both give one. Each pit is placed at an OpenStreetMap feature whose name is the pit's name followed by Colliery, Pit, Mine or Drift within 12 km of its village ({{pits.placing.osm_colliery|int}}), else at a Wikidata mine with a matching label ({{pits.placing.wikidata|int}}), else at its village in OS Open Names ({{pits.placing.village|int}}).</p>
+  <p><b>Towns and outcomes.</b> ONS Built-up Areas 2022 for Great Britain; Census 2021 tables TS001, TS007A, TS045, TS062 and TS066 summed from LSOAs by the ONS best-fit lookup; mean household income from the ONS small area estimates (FYE2023), population-weighted over best-fit MSOAs. Older collieries: OpenStreetMap features and Wikidata items named as collieries or coal pits more than 1.5 km from a 1984 pit.</p>
+  <p><b>Comparisons.</b> Least-squares regressions of each outcome on the town group, log population and its square, and region, with robust standard errors; checks add the log distance to the nearest built-up area of 100,000 or more, the share aged 65 or over, tighter and looser town rules, and subsets. A nearest-neighbour match within region on population gives a sickness gap of {{outcomes.matched_pit.pct_sick.diff|ptsabs}} points and an income gap of {{outcomes.matched_pit.income_fye2023.diff|gbpabs}}. These are associations, not causes.</p>
+</div>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/pit-closures">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23729637">Read the paper</a>
+  <a href="https://blog.tristanhotham.com/2026/10/28/pit-closures/">Blog post</a>
+  <a href="https://tristan-hotham.github.io/beeching-cuts/">Did Beeching kill your town?</a>
+  <a href="https://blog.tristanhotham.com/">More history data</a>
+</div>
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Did the Pits Closing Still Show? Britain's Coalfield Towns, 1984 to 2021. Zenodo. https://doi.org/10.5281/zenodo.23729637</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Colliery closure years: Northern Mine Research Society, Britain's nationalised coal mines from 1947 (NCB collieries in England, Wales and Scotland), nmrs.org.uk, used with credit; and Wikipedia's lists of collieries (CC BY-SA 4.0). Wikidata, CC0. Colliery points: © OpenStreetMap contributors, ODbL. Census 2021 and income estimates: Office for National Statistics, licensed under the Open Government Licence v3.0. OS Open Names and ONS geography: contains OS data © Crown copyright and database right 2026. Tiles © Esri.</p>
+  <p>Data and page text: CC BY-SA 4.0 (because of the Wikipedia lists), with pit coordinates derived from OpenStreetMap under the ODbL. Code: MIT licence.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const D = /*SITE*/;
+const R = /*RESULTS*/;
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => n == null ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const gbp = n => n == null ? "n/a" : "£" + fmt(n);
+const pc = v => v == null ? "n/a" : (v * 100).toFixed(1) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("focus", s); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { s(); e.stopPropagation(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); };
+const GROUPS = { pit: ["--hot", "Pit town: a 1984 pit within reach"], near: ["--near", "Coalfield neighbour: a 1984 pit within 10 km"], older: ["--older", "Older mining town: an earlier colliery within reach"], none: ["--none", "Comparison town"] };
+const NONE_SICK = R.none_sick;
+
+/* hero mark: a pit headframe with its winding wheel, and a red banner */
+(() => { const g = document.getElementById("heroMark");
+  el("line", { x1: 6, y1: 140, x2: 194, y2: 140, stroke: "var(--fg)", "stroke-width": 3 }, g);
+  el("path", { d: "M60 140 L88 34 L116 140", fill: "none", stroke: "var(--fg)", "stroke-width": 6, "stroke-linejoin": "round" }, g);
+  el("path", { d: "M88 34 L140 140", fill: "none", stroke: "var(--fg)", "stroke-width": 5 }, g);
+  [[72, 96, 104, 96], [66, 118, 110, 118], [78, 72, 98, 72]].forEach(([a, b, c, d]) => el("line", { x1: a, y1: b, x2: c, y2: d, stroke: "var(--fg)", "stroke-width": 3 }, g));
+  el("circle", { cx: 88, cy: 30, r: 22, fill: "none", stroke: "var(--fg)", "stroke-width": 5 }, g);
+  for (let i = 0; i < 6; i++) { const a = i * Math.PI / 3; el("line", { x1: 88, y1: 30, x2: 88 + 20 * Math.cos(a), y2: 30 + 20 * Math.sin(a), stroke: "var(--fg)", "stroke-width": 2 }, g); }
+  el("circle", { cx: 88, cy: 30, r: 4, fill: "var(--fg)" }, g);
+  el("rect", { x: 130, y: 70, width: 58, height: 40, fill: "var(--hot)" }, g);
+  el("line", { x1: 130, y1: 70, x2: 130, y2: 140, stroke: "var(--fg)", "stroke-width": 3 }, g);
+  el("line", { x1: 188, y1: 70, x2: 188, y2: 140, stroke: "var(--fg)", "stroke-width": 3 }, g);
+  el("rect", { x: 22, y: 110, width: 30, height: 30, fill: "var(--coal)" }, g);
+})();
+
+/* ===== map ===== */
+const PI = D.pits.map(a => ({ lat: a[0], lng: a[1], y: a[2], name: a[3], vill: a[4], area: a[5], geo: a[6] }));
+const TW = D.towns.map(a => ({ name: a[0], lat: a[1], lng: a[2], pop: a[3], g: a[4], pits: a[5], last: a[6], sick: a[7], inact: a[8], work: a[9], rout: a[10], p65: a[11], inc: a[12], region: a[13], np: a[14], npy: a[15], npkm: a[16] }));
+let lmap, tiles, piMk = [], twMk = [], year = 1984, mode = "pits", timer = null;
+function tileUrl() { return `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_${isDark() ? "Dark" : "Light"}_Gray_Base/MapServer/tile/{z}/{y}/{x}`; }
+function zf() { return Math.pow(1.3, Math.min(lmap.getZoom(), 11) - 6); }
+function piStyle(s) {
+  if (mode === "towns") return lmap.getZoom() >= 9 ? { radius: 3.5, fillColor: css("--coal"), fillOpacity: 1, color: css("--bg"), weight: 1, opacity: 1 } : { opacity: 0, fillOpacity: 0, radius: 0 };
+  const now = s.y === year, open = s.y > year;
+  if (now) return { radius: 7 * zf(), fillColor: css("--now"), fillOpacity: 1, color: css("--fg"), weight: 1, opacity: 1 };
+  if (open) return { radius: 4.2 * zf(), fillColor: css("--coal"), fillOpacity: 0.95, color: css("--bg"), weight: 1, opacity: 1 };
+  return { radius: 3 * zf(), fillColor: css("--hot"), fillOpacity: 0.25, color: css("--hot"), weight: 1, opacity: 0.7 };
+}
+function twStyle(t) {
+  if (mode !== "towns") return { opacity: 0, fillOpacity: 0, radius: 0 };
+  const z = Math.pow(1.3, Math.min(lmap.getZoom(), 8) - 6);
+  const r = t.pop ? Math.max(2.5, Math.min(26, Math.sqrt(t.pop) / 28)) : 3.5;
+  return { radius: r * z, fillColor: css(GROUPS[t.g][0]), fillOpacity: t.g === "none" ? 0.45 : 0.8, color: css("--bg"), weight: 0.8, opacity: 1 };
+}
+function twPop(t) { const row = (k, v) => v == null ? "" : `<dt>${k}</dt><dd>${v}</dd>`;
+  return `<div class="pop"><b class="t">${esc(t.name)}</b><div class="c">${esc(t.region)} · ${GROUPS[t.g][1]}</div><dl>${row("Residents 2021", t.pop ? fmt(t.pop) : null)}${row("Pits (closed)", t.pits ? esc(t.pits) : null)}${t.pits ? "" : row("Nearest 1984 pit", `${esc(t.np)} (${t.npy}), ${t.npkm} km`)}${row("Long-term sick", t.sick != null ? pc(t.sick) : null)}${row("Inactive, other", t.inact != null ? pc(t.inact) : null)}${row("Routine jobs", t.rout != null ? pc(t.rout) : null)}${row("Income FYE2023", t.inc ? gbp(t.inc) : null)}</dl>${t.region === "Scotland" ? '<div class="note">Census 2021 figures cover England and Wales only.</div>' : ""}</div>`; }
+function legend() {
+  const L = document.getElementById("legend");
+  if (mode === "pits") L.innerHTML = `<span><i style="background:var(--coal)"></i>Working in ${year}</span><span><i style="background:var(--now)"></i>Closed in ${year}</span><span><i style="background:transparent;border:1px solid var(--hot)"></i>Closed earlier</span>`;
+  else L.innerHTML = ["pit", "near", "older", "none"].map(g => `<span><i style="background:var(${GROUPS[g][0]})"></i>${GROUPS[g][1]}</span>`).join("") + "<span>Sized by 2021 residents (England and Wales). Zoom in to see the pits.</span>";
+}
+function restyle() {
+  piMk.forEach(m => m.setStyle(piStyle(m.s))); twMk.forEach(m => m.setStyle(twStyle(m.t)));
+  document.getElementById("yr").textContent = year;
+  const open = PI.filter(s => s.y > year).length, k = PI.filter(s => s.y === year).length;
+  document.getElementById("cnt").textContent = mode === "pits" ? `${fmt(k)} closed in ${year}; ${fmt(open)} still working at the end of the year` : "";
+  legend();
+}
+(() => {
+  if (!window.L) { document.getElementById("lmap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; return; }
+  lmap = L.map("lmap", { preferCanvas: true, zoomSnap: 0.5, minZoom: 5, maxZoom: 14, scrollWheelZoom: false });
+  lmap.fitBounds([[51.0, -5.2], [56.4, 1.5]], { padding: innerWidth < 600 ? [0, 0] : [10, 10] });
+  tiles = L.tileLayer(tileUrl(), { attribution: 'Tiles &copy; Esri &middot; Pits: NMRS, Wikipedia, Wikidata, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 16 }).addTo(lmap);
+  const rend = L.canvas({ padding: 0.5, tolerance: 3 });
+  [...TW].sort((a, b) => (b.pop || 0) - (a.pop || 0)).forEach(t => { const m = L.circleMarker([t.lat, t.lng], { renderer: rend }); m.t = t; m.bindPopup(() => twPop(t), { maxWidth: 300 }); m.addTo(lmap); twMk.push(m); });
+  PI.forEach(s => { const m = L.circleMarker([s.lat, s.lng], { renderer: rend }); m.s = s; m.bindPopup(() => `<div class="pop"><b class="t">${esc(s.name)}</b><div class="c">${esc(s.vill)} · ${esc(s.area)}</div>Closed ${s.y}${s.geo === "v" ? '<div class="note">Placed at its village, not the pit head.</div>' : ""}</div>`); m.addTo(lmap); piMk.push(m); });
+  lmap.on("zoomend", restyle);
+  lmap.on("click focus", () => lmap.scrollWheelZoom.enable());
+  lmap.getContainer().addEventListener("mouseleave", () => lmap.scrollWheelZoom.disable());
+  restyle();
+  const sl = document.getElementById("year"), pb = document.getElementById("play");
+  sl.oninput = () => { year = +sl.value; setMode("pits"); };
+  const stop = () => { clearInterval(timer); timer = null; pb.textContent = "▶ Play"; pb.setAttribute("aria-pressed", "false"); };
+  pb.onclick = () => { if (timer) { stop(); return; } setMode("pits"); if (+sl.value >= 2015) sl.value = 1983; year = +sl.value; restyle(); pb.textContent = "❚❚ Pause"; pb.setAttribute("aria-pressed", "true");
+    timer = setInterval(() => { if (year >= 2015) { stop(); return; } year += 1; sl.value = year; restyle(); }, 650); };
+  document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => setMode(b.dataset.mode));
+  redraws.push(() => { tiles.setUrl(tileUrl()); restyle(); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => redraws.forEach(f => f()));
+})();
+function setMode(m) { mode = m; document.querySelectorAll("[data-mode]").forEach(x => x.setAttribute("aria-pressed", x.dataset.mode === m)); if (lmap) restyle(); }
+
+/* ===== find your town ===== */
+(() => {
+  const names = new Map();
+  TW.forEach(t => { if (!names.has(t.name) || (t.pop || 0) > (names.get(t.name).pop || 0)) names.set(t.name, t); });
+  document.getElementById("townlist").innerHTML = [...names.keys()].sort().map(n => `<option value="${esc(n)}">`).join("");
+  const q = document.getElementById("q"), ans = document.getElementById("answer");
+  const SENT = {
+    pit: t => `is a pit town. ${t.pits.split(";").length > 1 ? "Pits" : "Pit"} within reach: ${esc(t.pits)}. The last closed in ${t.last}.`,
+    near: t => `is a coalfield neighbour: no 1984 pit within reach, but ${esc(t.np)} (closed ${t.npy}) was ${t.npkm} km from its centre.`,
+    older: t => `is an older mining town: no 1984 pit nearby (the nearest, ${esc(t.np)}, closed ${t.npy}, was ${t.npkm} km away), but an earlier colliery is mapped within reach.`,
+    none: t => `had no 1984 pit nearby. The nearest was ${esc(t.np)} (closed ${t.npy}), ${t.npkm} km away.` };
+  const find = () => { const v = q.value.trim().toLowerCase(); if (!v) return;
+    let t = names.get(q.value.trim()) || [...names.values()].find(x => x.name.toLowerCase() === v) || [...names.values()].filter(x => x.name.toLowerCase().startsWith(v)).sort((a, b) => (b.pop || 0) - (a.pop || 0))[0] || [...names.values()].filter(x => x.name.toLowerCase().includes(v)).sort((a, b) => (b.pop || 0) - (a.pop || 0))[0];
+    ans.style.display = "block";
+    if (!t) { ans.style.borderLeftColor = "var(--border)"; ans.innerHTML = `<b class="t">Not found</b>I could not find "${esc(q.value)}" among the built-up areas of 2,000 people or more. Try the nearest town's name.`; return; }
+    ans.style.borderLeftColor = `var(${GROUPS[t.g][0]})`;
+    ans.innerHTML = `<b class="t">${esc(t.name)}</b>${t.pop ? fmt(t.pop) + " residents in 2021. " : ""}It ${SENT[t.g](t)}` +
+      (t.sick != null ? `<small>Long-term sick or disabled: ${pc(t.sick)} of adults (comparison town median ${pc(NONE_SICK)}) · inactive, not retired or students: ${pc(t.inact)} · routine or semi-routine jobs: ${pc(t.rout)}${t.inc ? " · mean household income " + gbp(t.inc) + " (FYE2023)" : ""}</small>` : t.region === "Scotland" ? "<small>Census 2021 figures cover England and Wales only.</small>" : "");
+    if (lmap) { setMode("towns"); lmap.setView([t.lat, t.lng], 11); const m = twMk.find(x => x.t === t); if (m) setTimeout(() => m.openPopup(), 350); } };
+  document.getElementById("go").onclick = find;
+  q.addEventListener("change", find); q.addEventListener("keydown", e => { if (e.key === "Enter") find(); });
+})();
+
+/* ===== closures by year ===== */
+resp(document.getElementById("years"), (W, nar) => {
+  const rows = []; for (let y = 1984; y <= 2015; y++) rows.push({ y, n: R.by_year[y] || 0 });
+  const H = nar ? 230 : 270, m = { l: 34, r: 8, t: 16, b: 34 }, bw = (W - m.l - m.r) / rows.length, max = 35;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Bar chart of deep mine closures per year, 1984 to 2015, peaking in 1985" }, document.getElementById("years"));
+  const Y = v => H - m.b - v / max * (H - m.t - m.b);
+  [0, 10, 20, 30].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, fmt(t), "lab m s", "end"); });
+  rows.forEach((r, i) => { const x = m.l + i * bw, c = r.y <= 1994 ? "--hot" : "--coal";
+    const b = el("rect", { x: x + 1, y: Y(r.n), width: Math.max(1, bw - 2), height: Math.max(0, H - m.b - Y(r.n)), fill: `var(${c})` }, svg);
+    hover(b, `<b>${r.y}</b><br>${fmt(r.n)} pit${r.n === 1 ? "" : "s"} closed`);
+    if (r.y % (nar ? 10 : 5) === 0) lbl(svg, x + bw / 2, H - m.b + 15, r.y, "lab m s", "middle"); });
+  const pi = rows.findIndex(r => r.y === R.peak_year); lbl(svg, m.l + pi * bw + bw + 4, Y(rows[pi].n) + 10, `${R.peak_year}: ${rows[pi].n}`, "lab s b", "start");
+  const ri = rows.findIndex(r => r.y === 1994); el("line", { x1: m.l + (ri + 1) * bw, x2: m.l + (ri + 1) * bw, y1: m.t + 18, y2: H - m.b, stroke: "var(--fg)", "stroke-dasharray": "2 3" }, svg);
+  lbl(svg, m.l + (ri + 1) * bw + 6, m.t + 30, "1994: privatisation", "lab s", "start");
+});
+
+/* ===== strip by area ===== */
+resp(document.getElementById("strip"), (W, nar) => {
+  const step = nar ? 3.6 : 4.2, m = { l: nar ? 112 : 140, r: 12, t: 6, b: 28 };
+  const rows = R.areas.map(a => { const ps = PI.filter(p => p.area === a.area); const c = {}; ps.forEach(p => c[p.y] = (c[p.y] || 0) + 1);
+    const mx = Math.max(...Object.values(c)); return { a, ps, h: Math.max(22, mx * step + 10) }; });
+  const H = rows.reduce((s, r) => s + r.h, 0) + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Dot strip of pit closure years by coalfield area" }, document.getElementById("strip"));
+  const X = y => m.l + (y - 1983.5) / 32 * (W - m.l - m.r);
+  [1985, 1990, 1995, 2000, 2005, 2010, 2015].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); if (!nar || t % 10 === 5 || t === 2015) lbl(svg, X(t), H - m.b + 15, t, "lab m s", "middle"); });
+  let y0 = m.t;
+  rows.forEach(({ a, ps, h }, i) => { const y = y0 + h / 2;
+    if (i) el("line", { x1: m.l - 4, x2: W - m.r, y1: y0, y2: y0, stroke: "var(--rule)", "stroke-dasharray": "1 3" }, svg);
+    lbl(svg, m.l - 8, y + 4, a.area, nar ? "lab s" : "lab", "end");
+    const cnt = {}; ps.sort((p, q) => p.y - q.y).forEach(p => { const k = cnt[p.y] = (cnt[p.y] || 0) + 1;
+      const c = el("circle", { cx: X(p.y), cy: y + (k % 2 ? -1 : 1) * Math.floor(k / 2) * step, r: nar ? 2.6 : 3.2, fill: p.y <= 1994 ? "var(--hot)" : "var(--coal)", "fill-opacity": 0.85, stroke: "var(--bg)", "stroke-width": 0.6 }, svg);
+      hover(c, `<b>${esc(p.name)}</b><br>${esc(p.vill)} · closed ${p.y}`); });
+    y0 += h; });
+});
+
+/* ===== by region ===== */
+resp(document.getElementById("regions"), (W, nar) => {
+  const rows = R.by_region.filter(r => r.n >= 20), rowH = 26, m = { l: nar ? 116 : 190, r: 66, t: 4, b: 26 }, H = rows.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of towns that were pit towns, by region" }, document.getElementById("regions"));
+  const X = v => m.l + v / 0.3 * (W - m.l - m.r);
+  [0, 0.1, 0.2, 0.3].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(t), H - m.b + 15, Math.round(t * 100) + "%", "lab m s", "middle"); });
+  rows.forEach((r, i) => { const y = m.t + i * rowH;
+    lbl(svg, m.l - 8, y + 16, nar ? r.region.replace("Yorkshire and The Humber", "Yorkshire").replace("East of England", "East") : r.region, nar ? "lab s" : "lab", "end");
+    const b = el("rect", { x: m.l, y: y + 5, width: Math.max(1, X(r.share_pit) - m.l), height: rowH - 10, rx: 2, fill: "var(--hot)" }, svg);
+    hover(b, `<b>${esc(r.region)}</b><br>${r.pit} of ${r.n} towns were pit towns`);
+    lbl(svg, X(r.share_pit) + 6, y + 16, `${Math.round(r.share_pit * 100)}% (${r.pit})`, "lab s"); });
+});
+
+/* ===== gaps ===== */
+resp(document.getElementById("gaps"), (W, nar) => {
+  const O = [["pct_sick", "Long-term sick"], ["pct_inactive_working_age", "Inactive, other"], ["pct_in_work", "In work"], ["pct_routine", "Routine jobs"], ["pct_managerial", "Managerial jobs"], ["pct_65plus", "Aged 65+"], ["pct_no_car", "No car or van"]];
+  const G = [["pit", "--hot", "pit towns"], ["older", "--older", "older mining"], ["near", "--near", "neighbours"]];
+  const rowH = 56, m = { l: nar ? 104 : 150, r: 16, t: 30, b: 30 }, H = (O.length + 1) * rowH + m.t + m.b + 24;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Estimated differences between pit towns, older mining towns or coalfield neighbours and similar comparison towns, with 95% intervals" }, document.getElementById("gaps"));
+  const lim = 10, X = v => m.l + (v + lim) / (2 * lim) * (W - m.l - m.r);
+  el("rect", { x: X(-0.4), y: m.t - 6, width: X(0.4) - X(-0.4), height: O.length * rowH + 6, fill: "var(--panel)" }, svg);
+  [-10, -5, 0, 5, 10].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t - 6, y2: m.t + O.length * rowH, stroke: t === 0 ? "var(--fg)" : "var(--rule)" }, svg); lbl(svg, X(t), m.t + O.length * rowH + 14, (t > 0 ? "+" : t < 0 ? "−" : "") + Math.abs(t) + " pts", "lab m s", "middle"); });
+  let lx = nar ? 0 : m.l; G.forEach(([g, c, name]) => { const t = lbl(svg, lx, 12, "● " + name, "lab s b"); t.style.fill = `var(${c})`; lx += (name.length + 3) * (nar ? 6.8 : 7.4); });
+  const row = (y, est, sc, c, txt, unit) => { if (!est) return; const lo = Math.max(-lim, est.lo * sc), hi = Math.min(lim, est.hi * sc), b = est.b * sc;
+    el("line", { x1: X(lo), x2: X(hi), y1: y, y2: y, stroke: c, "stroke-width": 2.5 }, svg);
+    const d = el("circle", { cx: X(Math.max(-lim, Math.min(lim, b))), cy: y, r: 5.5, fill: c, stroke: "var(--bg)", "stroke-width": 1.5 }, svg);
+    hover(d, `<b>${txt}</b><br>${unit(est.b)} (95% interval ${unit(est.lo)} to ${unit(est.hi)})`); };
+  O.forEach(([k, name], i) => { const y = m.t + i * rowH + 12, e = R.models[k];
+    lbl(svg, m.l - 10, y + 16, name, nar ? "lab s" : "lab", "end");
+    const u = v => (v > 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + " pts";
+    G.forEach(([g, c, nm], j) => row(y + j * 13, e["size_region_" + g], 100, `var(${c})`, `${name}: ${nm}`, u)); });
+  const y0 = m.t + O.length * rowH + 44, e = R.models.income_fye2023;
+  [-10, -5, 0, 5, 10].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: y0 - 10, y2: y0 + 34, stroke: t === 0 ? "var(--fg)" : "var(--rule)" }, svg); lbl(svg, X(t), y0 + 48, (t > 0 ? "+" : t < 0 ? "−" : "") + "£" + Math.abs(t) + "k", "lab m s", "middle"); });
+  lbl(svg, m.l - 10, y0 + 16, "Income", nar ? "lab s" : "lab", "end");
+  const ug = v => (v > 0 ? "+" : "−") + "£" + fmt(Math.abs(v));
+  G.forEach(([g, c, nm], j) => { const s = e["size_region_" + g]; row(y0 + j * 13, { b: s.b / 1000, lo: s.lo / 1000, hi: s.hi / 1000 }, 1, `var(${c})`, `Household income: ${nm}`, v => ug(v * 1000)); });
+});
+
+/* ===== waves ===== */
+resp(document.getElementById("waves"), (W, nar) => {
+  const cols = [["early", "Last pit shut 1984 to 1987", R.timing.n.early], ["mid", "1988 to 1994", R.timing.n.mid], ["late", "1995 to 2015", R.timing.n.late], ["none", "Comparison towns", R.none_n]];
+  const ms = [["pct_sick", "Long-term sick", "--hot"], ["pct_inactive_working_age", "Inactive, other", "--coal"]];
+  const H = 250, m = { l: 34, r: 8, t: 26, b: nar ? 58 : 44 }, gw = (W - m.l - m.r) / cols.length, max = 0.15;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Median long-term sickness and other inactivity in pit towns by when their last pit closed, with comparison towns" }, document.getElementById("waves"));
+  const Y = v => H - m.b - v / max * (H - m.t - m.b);
+  [0, 0.05, 0.1, 0.15].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, Math.round(t * 100) + "%", "lab m s", "end"); });
+  let lx = m.l; ms.forEach(([k, nm, c]) => { const t = lbl(svg, lx, 12, "■ " + nm, "lab s b"); t.style.fill = `var(${c})`; lx += (nm.length + 3) * 7.4; });
+  cols.forEach(([w, name, n], i) => { const x0 = m.l + i * gw, bw = Math.min(34, gw / 3);
+    ms.forEach(([k, nm, c], j) => { const v = w === "none" ? R.none_med[k] : R.timing.models[k].median[w];
+      const b = el("rect", { x: x0 + gw / 2 - bw + j * bw, y: Y(v), width: bw - 3, height: H - m.b - Y(v), fill: `var(${c})`, "fill-opacity": w === "none" ? 0.45 : 0.9 }, svg);
+      hover(b, `<b>${name}</b> (${n} towns)<br>${nm}: ${pc(v)}`); });
+    const words = nar ? name.replace("Last pit shut ", "").split(" ") : [name];
+    if (nar && words.length > 2) { lbl(svg, x0 + gw / 2, H - m.b + 15, words.slice(0, 2).join(" "), "lab s", "middle"); lbl(svg, x0 + gw / 2, H - m.b + 29, words.slice(2).join(" "), "lab s", "middle"); }
+    else lbl(svg, x0 + gw / 2, H - m.b + 15, nar ? words.join(" ") : name, "lab s", "middle");
+    lbl(svg, x0 + gw / 2, H - m.b + (nar ? 43 : 29), `${n} towns`, "lab m s", "middle"); });
+});
+
+/* ===== tables ===== */
+document.getElementById("bigtab").innerHTML = `<thead><tr><th>Town</th><th class="num">2021</th><th class="num">Last pit</th><th class="num">Long-term sick</th><th class="wide">Pits within reach (closed)</th></tr></thead><tbody>` +
+  R.top_pit.slice(0, 15).map(r => `<tr><td><span class="dot" style="background:var(--hot)"></span>${esc(r.name)}<small>${esc(r.region)}</small></td><td class="num">${fmt(r.pop)}</td><td class="num">${r.last}</td><td class="num">${pc(r.sick)}</td><td class="wide">${esc(r.pits)}</td></tr>`).join("") + "</tbody>";
+document.getElementById("sicktab").innerHTML = `<thead><tr><th>Town</th><th class="num">2021</th><th class="num">Long-term sick</th><th class="num">Last pit</th><th class="wide">Pits within reach (closed)</th></tr></thead><tbody>` +
+  R.top_sick.slice(0, 10).map(r => `<tr><td><span class="dot" style="background:var(--hot)"></span>${esc(r.name)}<small>${esc(r.region)}</small></td><td class="num">${fmt(r.pop)}</td><td class="num">${pc(r.sick)}</td><td class="num">${r.last}</td><td class="wide">${esc(r.pits)}</td></tr>`).join("") + "</tbody>";
+</script>
+</body>
+</html>
