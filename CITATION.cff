@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Did the Pits Closing Still Show? Britain's Coalfield Towns, 1984 to 2021"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23729637"
+url: "https://maps.tristanhotham.com/pit-closures/"
+repository-code: "https://github.com/Tristan-Hotham/pit-closures"
+license: CC-BY-SA-4.0
+keywords:
+  - "coal mining"
+  - "pit closures"
+  - "miners' strike"
+  - "coalfields"
+  - "deindustrialisation"
+  - "long-term sickness"
+  - "Census 2021"
+  - "household income"
+  - "historical GIS"
+  - "Great Britain"
